@@ -41,6 +41,11 @@ body {
 	background: #383838;
 }
 
+.navbar-img {
+	width: 20px;
+	height: 20px;
+}
+
 .new-tweet-input {
 	margin-bottom: -20px;
 	resize: none;
@@ -139,4 +144,25 @@ body {
 	float: right;
 	margin-top: 35px;
 	margin-left: 10px;
+}
+
+.photo-suggestion {
+	width: 55px;
+	height: 55px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-top: -10px;
+	margin-left: -3px;
+}
+
+.suggestion-container {
+	margin-top: 5px;
+}
+
+div.float {
+	float: left;
+}
+
+.left-marg {
+	padding: 10px;
 }
