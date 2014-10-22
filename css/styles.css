@@ -59,6 +59,7 @@ body {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 }
+
 .navbar-profile img {
 	width: 35px;
 	height: 35px;
@@ -73,6 +74,69 @@ body {
 	font-weight: bolder;
 }
 
-hr {
-	background: #000;
+.dashboard {
+	margin-right: -20px;
+}
+
+.tweet-view {
+}
+
+.right-board {
+	margin-left: -20px;
+}
+
+.inside-tweet {
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: -15px;
+	padding: 10px;
+}
+
+.inside-tweet-new-compose {
+	resize: none;
+}
+
+.photo-left-dashboard {
+	width: 65px;
+	height: 65px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-top: -10px;
+	margin-left: -3px;
+}
+
+.bold-text {
+	font-weight: bold;
+	color: black;
+} .bold-text:hover {
+	color: black;
+}
+
+.feature-container {
+	margin-left: -16px;
+	margin-right: -16px;
+	margin-top: -16px;
+	margin-bottom: -15px;
+}
+
+.feature {
+	width: 264px;
+	height: 100px;
+}
+
+.force-right {
+	position: fixed;
+	float: right;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: black;
+} .force-right:hover {
+	color: black;
+}
+
+.force-right-down {
+	position: fixed;
+	float: right;
+	margin-top: 35px;
+	margin-left: 10px;
 }
