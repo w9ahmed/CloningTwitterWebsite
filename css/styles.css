@@ -1,9 +1,13 @@
 body {
-	margin-top: 50px;
+	margin-top: 70px;
 	background: url("../img/TwitterBackNew.jpg");
 	background-size: 100%;
 	background-position: 0px 50px;
 }
+
+/*.nav {
+	height: 50px;
+}*/
 
 .search-form {
 	margin-right: 15px;
@@ -23,4 +27,52 @@ body {
 
 .marg-left {
 	margin-left: 10px;
+}
+
+.nav li div {
+	width: inherit;
+	height: 5px;
+	background: #fff;
+	margin-bottom: -1px;
+	/*margin-top: -4px;*/
+}
+
+.nav li:hover div, .nav li.active div {
+	background: #383838;
+}
+
+.new-tweet-input {
+	margin-bottom: -20px;
+	resize: none;
+}
+
+.text-count {
+	margin-right: 10px;
+	margin-top: 7px;
+	font-size: 15px;
+}
+
+.navbar-profile {
+	margin-right: 15px;
+	/*margin-left: 10px;*/
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.navbar-profile img {
+	width: 35px;
+	height: 35px;
+}
+
+.profile-drop {
+	margin-top: 14px;
+}
+
+.profile-drop-view h5 {
+	margin-bottom: -2px;
+	font-weight: bolder;
+}
+
+hr {
+	background: #000;
 }
