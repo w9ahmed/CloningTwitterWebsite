@@ -151,12 +151,7 @@ body {
 	height: 55px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	margin-top: -10px;
 	margin-left: -3px;
-}
-
-.suggestion-container {
-	margin-top: 5px;
 }
 
 div.float {
@@ -165,4 +160,9 @@ div.float {
 
 .left-marg {
 	padding: 10px;
+}
+
+.container-padding {
+	margin-bottom: 10px;
+	/*background-color: tomato;*/
 }
