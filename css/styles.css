@@ -1,8 +1,9 @@
 body {
 	margin-top: 70px;
-	background: url("../img/TwitterBackNew.jpg");
+	background: url("../img/TwitterBackNew.jpg") no-repeat;
 	background-size: 100%;
 	background-position: 0px 50px;
+	background-attachment: fixed;
 }
 
 /*.nav {
@@ -196,8 +197,8 @@ div.message-box {
 .stream-bar {
 	text-align: center;
 	color: steelblue;
-	padding-top: 10px;
-	height: 40px;
+	padding-top: 11px;
+	height: 45px;
 	margin-left: -16px;
 	margin-right: -16px;
 	border-top: 1px solid #ddd;
@@ -215,20 +216,6 @@ div.message-box {
 	margin-left: -16px;	
 	margin-right: -16px;
 	border-bottom: 1px solid #ddd;
-}
-
-.tweet-actions {
-	margin-left: 5px;
-}
-
-.tweet-actions li {
-	margin-right: 15px;
-	margin-left: 15px;
-	font-size: 15px;
-	font-weight: bolder;
-}
-
-.tweet-subject {
 }
 
 .big {
@@ -251,17 +238,13 @@ div.message-box {
 	color: orange;
 }
 
-.color-div {
-	background-color: tomato;
-}
-
 .block {
 	display: inline-block;
 	vertical-align: top;
 	height: auto;
 }
 
-.tweeter-photo {
+.tweeter-photo, .suggestion-photo {
 	background-color: steelblue;
 	width: 55px;
 	height: 55px;
@@ -282,4 +265,34 @@ div.message-box {
 }
 
 .tweet-text {
+}
+
+.tweet-action {
+	padding-top: 5px;
+}
+
+.tweet-action li {
+	margin-right: 10px;
+}
+
+.suggestion-details {
+	display: inline-block;
+	vertical-align: top;
+	width: 74%;
+	height: auto;
+}
+
+.suggestion-container {
+	margin-bottom: 7px;
+}
+
+.pop-acc {
+	padding-top: 7px;
+}
+
+.panel-divider {
+	height: 1px;
+	background-color: #ddd;
+	margin-left: -16px;
+	margin-right: -16px;
 }

@@ -231,22 +231,35 @@
                 
                 <div class="stream-view">
                   <ul class="list-unstyled">
+
                     <!-- TWEET BOX -->
                     <li class="stream-tweet">
                       <div class="tweet-container">
                         <div class="tweeter-photo"></div>
                         <div class="tweet-content">
-                          <div class="tweeter-name">Ahmed Sami</div>
+                          <div class="tweeter-name">
+                            <a href="#"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
+                            <small>- <a href="#">45s</a></small>
+                          </div>
                           <div class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                          <div class="tweet-action">
+                            <ul class="list-unstyled list-inline">
+                              <li id="reply"><a href="#"><div><span class="glyphicon glyphicon-new-window"></span></div></a></li>
+                              <li id="retweet"><a href="#"><div><span class="glyphicon glyphicon-retweet"></span></div></a></li>
+                              <li id="favorite"><a href="#"><div><span class="glyphicon glyphicon-asterisk"></span></div></a></li>
+                              <li id="options"><a href="#"><div><span class="glyphicon glyphicon-minus"></span></div></a></li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </li>
-                    <!-- end of TWEET BOX -->                  
+                    <!-- end of TWEET BOX -->
+
                   </ul>
                 </div>
 
@@ -264,70 +277,38 @@
                 <div><span><h4 class="text-muted">Who to follow<small> - <a href="#">Refresh</a> - <a href="#">View all</a></small></h4></span></div>
 
                 <!-- SUGGESTIONS -->
-                <div class="container-padding">
-                  <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <div class="float-left">
-                    <div><img class="photo-suggestion" src="img\me-alex-shades.jpg"></div>
+                <div class="suggestion-container">
+                  <div class="suggestion-photo"></div>
+                  <div class="suggestion-details">
+                    <a href="#"><strong>Ahmed Sami</strong><small class="text-muted"> @w9ahmed</small></a>
+                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
                   </div>
-                  <div class="margin-left">
-                    <div class="float-left">
-                      <a class="left-marg" href="#"><span>Ahmed Sami</span><span class="text-muted"> @w9ah...</span></a>
-                    </div>
-                    <div class="float-left">
-                      <span class="text-muted left-marg"><small>Followed by <a href="#">Ahmed Sami</a></small></span>
-                    </div>
-                    <div class="">
-                      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
-                    </div>
+                </div>
+                <!-- end of SUGGESTIONS -->
+                <!-- SUGGESTIONS -->
+                <div class="suggestion-container">
+                  <div class="suggestion-photo"></div>
+                  <div class="suggestion-details">
+                    <a href="#"><strong>Ahmed Sami</strong><small class="text-muted"> @w9ahmed</small></a>
+                    <div><span class="text-muted">Followed by </span><a href="#">Ahmed Sami</a></div>
+                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
                   </div>
                 </div>
                 <!-- end of SUGGESTIONS --> 
-                <!-- SUGGESTIONS -->
-                <div class="container-padding">
-                  <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <div class="float-left">
-                    <div><img class="photo-suggestion" src="img\me-alex-shades.jpg"></div>
-                  </div>
-                  <div class="margin-left">
-                    <div class="float-left">
-                      <a class="left-marg" href="#"><span>Ahmed Sami</span><span class="text-muted"> @w9ah...</span></a>
-                    </div>
-                    <div class="float-left">
-                      <span class="text-muted left-marg"><small>Followed by <a href="#">Ahmed Sami</a></small></span>
-                    </div>
-                    <div class="">
-                      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of SUGGESTIONS -->
-                <!-- SUGGESTIONS -->
-                <div class="container-padding">
-                  <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <div class="float-left">
-                    <div><img class="photo-suggestion" src="img\me-alex-shades.jpg"></div>
-                  </div>
-                  <div class="margin-left">
-                    <div class="float-left">
-                      <a class="left-marg" href="#"><span>Ahmed Sami</span><span class="text-muted"> @w9ah...</span></a>
-                    </div>
-                    <div class="float-left">
-                      <span class="text-muted left-marg"><small>Followed by <a href="#">Ahmed Sami</a></small></span>
-                    </div>
-                    <div class="">
-                      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of SUGGESTIONS -->
 
-                <div class="clear-float">
-                  <small>
-                    <a href="#"><span class="glyphicon glyphicon-user icon-btn"></span>Find people you know</a>
-                      <span> - </span>
-                    <a href="#">Popular accounts</a>  
-                  </small>
+                <!-- POPULAR ACCOUNTS -->
+                <div class="pop-acc">
+                  <div class="panel-divider"></div>
+                  <div>
+                    <small>
+                      <a href="#"><span class="glyphicon glyphicon-user icon-btn"></span>Find people you know</a>
+                        <span> - </span>
+                      <a href="#">Popular accounts</a>
+                    </small>
+                  </div>
                 </div>
+                <!-- POPULAR ACCOUNTS -->
+
               </div>
             </div>
             <!-- end of Find People you know -->
