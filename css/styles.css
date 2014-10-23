@@ -154,8 +154,12 @@ body {
 	margin-left: -3px;
 }
 
-div.float {
+div.float-left {
 	float: left;
+}
+
+div.float-right {
+	float: right;
 }
 
 .left-marg {
@@ -165,4 +169,29 @@ div.float {
 .container-padding {
 	margin-bottom: 10px;
 	/*background-color: tomato;*/
+}
+
+.photo-messages {
+	width: 60px;
+	height: 60px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+div.message-box {
+	width: inherit;
+	padding: 5px;
+}
+
+.dashboard-nav a {
+	color: #383838;
+}
+
+.dashboard-nav a:hover {
+	text-decoration: none;
+	color: steelblue;
+}
+
+.dashboard-nav-active {
+	font-weight: bolder;
 }
