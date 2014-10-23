@@ -211,11 +211,15 @@ div.message-box {
 	background-color: #ddd;
 }
 
-.stream-tweet {
+.stream-tweet, .direct-msg-container {
 	padding: 10px;
-	margin-left: -16px;	
-	margin-right: -16px;
+	margin-left: -15px;	
+	margin-right: -15px;
 	border-bottom: 1px solid #ddd;
+}
+
+.direct-msgs li:last-child .direct-msg-container {
+	border: none;
 }
 
 #reply a, #retweet a, #favorite a, #options a {
@@ -243,7 +247,7 @@ div.message-box {
 	height: auto;
 }
 
-.tweeter-photo, .suggestion-photo {
+.tweeter-photo, .suggestion-photo, .direct-msg-photo {
 	background-color: steelblue;
 	width: 55px;
 	height: 55px;
@@ -251,7 +255,7 @@ div.message-box {
 	display: inline-block;
 }
 
-.tweet-content {
+.tweet-content, .direct-msg-content {
 	display: inline-block;
 	vertical-align: top;
 	/*background-color: tomato;*/
