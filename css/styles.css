@@ -83,9 +83,6 @@ body {
 	margin-right: -20px;
 }
 
-.tweet-view {
-}
-
 .right-board {
 	margin-left: -20px;
 }
@@ -194,4 +191,95 @@ div.message-box {
 
 .dashboard-nav-active {
 	font-weight: bolder;
+}
+
+.stream-bar {
+	text-align: center;
+	color: steelblue;
+	padding-top: 10px;
+	height: 40px;
+	margin-left: -16px;
+	margin-right: -16px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background-color: #eee;
+}
+
+.stream-bar:hover {
+	cursor: pointer;
+	background-color: #ddd;
+}
+
+.stream-tweet {
+	padding: 10px;
+	margin-left: -16px;	
+	margin-right: -16px;
+	border-bottom: 1px solid #ddd;
+}
+
+.tweet-actions {
+	margin-left: 5px;
+}
+
+.tweet-actions li {
+	margin-right: 15px;
+	margin-left: 15px;
+	font-size: 15px;
+	font-weight: bolder;
+}
+
+.tweet-subject {
+}
+
+.big {
+	height: auto;
+}
+
+#reply a, #retweet a, #favorite a, #options a {
+	color: #ccc;
+}
+
+#reply a:hover, #options a:hover {
+	color: steelblue;
+}
+
+#retweet a:hover {
+	color: green;
+}
+
+#favorite a:hover {
+	color: orange;
+}
+
+.color-div {
+	background-color: tomato;
+}
+
+.block {
+	display: inline-block;
+	vertical-align: top;
+	height: auto;
+}
+
+.tweeter-photo {
+	background-color: steelblue;
+	width: 55px;
+	height: 55px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.tweet-content {
+	display: inline-block;
+	vertical-align: top;
+	/*background-color: tomato;*/
+	width: 88%;
+	height: auto;
+	padding-left: 5px;
+}
+
+.tweeter-name {
+}
+
+.tweet-text {
 }
