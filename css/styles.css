@@ -204,6 +204,7 @@ div.message-box {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	background-color: #eee;
+	display: none;
 }
 
 .stream-bar:hover {
@@ -328,16 +329,16 @@ div.message-box {
 }
 
 .dash-profile-name {
-	/*background-color: tomato;*/
 	display: inline-block;
 	margin-left: 2px;
-	vertical-align: baseline;
+	vertical-align: super;
 	width: 71%;
 }
 
 .dash-profile-name h5 {
 	color: black;
 	font-weight: bold;
+	margin-bottom: 0;
 }
 
 .bdg-mrg {
@@ -377,4 +378,15 @@ div.message-box {
 .dash-profile-details:hover, .dash-profile-details:hover > span {
 	text-decoration: none;
 	color: steelblue;
+}
+
+.the-panel-title {
+	margin-left: -16px;
+	margin-right: -16px;
+	padding: 0 15px 15px 15px;
+	border-bottom: 1px solid #ddd;
+}
+
+.the-panel-title h4 {
+	margin: 0;
 }
