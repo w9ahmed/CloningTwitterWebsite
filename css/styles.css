@@ -198,7 +198,7 @@ div.message-box {
 	text-align: center;
 	color: steelblue;
 	padding-top: 11px;
-	height: 45px;
+	height: 42px;
 	margin-left: -16px;
 	margin-right: -16px;
 	border-top: 1px solid #ddd;
@@ -347,4 +347,34 @@ div.message-box {
 
 .no-display {
 	display: none;
+}
+
+.msg-sender-details, .sugg-details, .tweeter-sender-details {
+	color: black;
+}
+
+.msg-sender-details:hover, .sugg-details:hover, .tweeter-sender-details:hover {
+	text-decoration: none;
+}
+
+.msg-sender-details > small, .sugg-details > small, .tweeter-sender-details > small {
+	margin-left: 2px;
+}
+
+.msg-sender-details:hover > strong, .sugg-details:hover > strong, .tweeter-sender-details:hover > strong {
+	text-decoration: underline;
+}
+
+.collapsed-tweet {
+	margin-top: 50px;
+}
+
+.dash-profile-details span:last-child {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.dash-profile-details:hover, .dash-profile-details:hover > span {
+	text-decoration: none;
+	color: steelblue;
 }
