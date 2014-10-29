@@ -176,6 +176,41 @@
       </div>
       <!-- end of DIRECT MESSAGES MODAL -->
 
+      <!-- OPEN TWEETER PROFILE -->
+      <!-- Modal -->
+      <div class="modal fade" id="showTweeterProfile" tabindex="-1" role="dialog" aria-labelledby="showTweeterProfile" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title text-muted text-center" id="myModalLabel">Profile summary</h4>
+            </div>
+            <div class="modal-body">
+              <div class="feature-modal-photo"></div>
+              <div class="profile-modal-details-container">
+                <div class="profile-photo-modal"></div>
+                <div class="profile-details-modal">
+                  <ul class="list-unstyled list-inline">
+                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>TWEETS</small></span><br><span>46.9K</span></a></li>
+                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>FOLLOWING</small></span><br><span>287</span></a></li>
+                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>FOLLOWERS</small></span><br><span>289</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dash-profile-name">
+                <a href="#"><h5>Ahmed Sami Mohamed</h5></a>
+                <a href="#"><small class="text-muted">@w9ahmed</small></a>
+              </div>
+              <div>Description</div>
+            </div>
+            <div class="modal-footer">
+              <a class="pull-left" href="#"><strong>Go to full profile</strong></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OPEN TWEETER PROFILE -->
+
       <div class="fluid-container">
         <div class="row">
 
@@ -264,7 +299,7 @@
                         <div class="tweeter-photo"></div>
                         <div class="tweet-content">
                           <div class="tweeter-name">
-                            <a class="tweeter-sender-details" href="#"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
+                            <a class="tweeter-sender-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
                             <small>- <a href="#">45s</a></small>
                           </div>
                           <div class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -291,7 +326,7 @@
                         <div class="tweeter-photo"></div>
                         <div class="tweet-content">
                           <div class="tweeter-name">
-                            <a class="tweeter-sender-details" href="#"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
+                            <a class="tweeter-sender-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
                             <small>- <a href="#">1m</a></small>
                           </div>
                           <div class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -330,7 +365,7 @@
                   <div class="suggestion-photo"></div>
                   <div class="suggestion-details">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <a class="sugg-details" href="#"><strong>Ahmed Sami</strong><small class="text-muted">@w9ahmed</small></a>
+                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami</strong><small class="text-muted">@w9ahmed</small></a>
                     <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
                   </div>
                 </div>
@@ -340,7 +375,7 @@
                   <div class="suggestion-photo"></div>
                   <div class="suggestion-details">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <a class="sugg-details" href="#"><strong>Ahmed Sami</strong><small class="text-muted">@w9ahmed</small></a>
+                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami</strong><small class="text-muted">@w9ahmed</small></a>
                     <div><span class="text-muted">Followed by </span><a href="#">Ahmed</a></div>
                     <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
                   </div>

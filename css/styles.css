@@ -390,3 +390,33 @@ div.message-box {
 .the-panel-title h4 {
 	margin: 0;
 }
+
+.feature-modal-photo {
+	background-color: tomato;
+	margin-left: -15px;
+	margin-top: -15px;
+	width: 105.2%;
+	height: 125px;
+}
+
+.profile-modal-details-container {
+	margin-top: -35px;
+}
+
+.profile-photo-modal {
+	background-color: steelblue;
+	width: 75px;
+	height: 75px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.profile-details-modal {
+	display: inline-block;
+	margin-left: 2px;
+	vertical-align: super;
+}
+
+.profile-summary-btn {
+	display: inline-block;
+}
