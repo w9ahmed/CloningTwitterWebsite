@@ -1,3 +1,25 @@
+/* ****** MIXINS ****** */
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin color_no_text_decoration($color) {
+	color: $color;
+	text-decoration: none;
+}
+
+@mixin border_color_radius($size: 1px, $color: #ccc, $radius: 5px) {
+	border: $size solid $color;
+	border-radius: $radius;
+}
+
+@mixin display_and_vertical_align($mode: inline-block, $align: top) {
+	display: $mode;
+	vertical-align: $align;
+}
+/* ****** ****** ****** */
+
 body {
 	margin-top: 70px;
 	background: url("../img/TwitterBackNew.jpg") no-repeat;
@@ -31,8 +53,7 @@ body {
 }
 
 .nav li div {
-	width: inherit;
-	height: 5px;
+	@include size(inherit, 5px);
 	background: #fff;
 	margin-bottom: -1px;
 	/*margin-top: -4px;*/
@@ -43,8 +64,7 @@ body {
 }
 
 .navbar-img {
-	width: 20px;
-	height: 20px;
+	@include size(20px);
 }
 
 .new-tweet-input {
@@ -62,13 +82,11 @@ body {
 	margin-right: 15px;
 	/*margin-left: 10px;*/
 	margin-top: 5px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	@include border_color_radius();
 }
 
 .navbar-profile img {
-	width: 35px;
-	height: 35px;
+	@include size(35px);
 }
 
 .profile-drop {
@@ -100,10 +118,8 @@ body {
 }
 
 .photo-left-dashboard {
-	width: 65px;
-	height: 65px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	@include size(65px);
+	@include border_color_radius();
 	margin-top: -10px;
 	margin-left: -3px;
 }
@@ -111,20 +127,17 @@ body {
 .bold-text {
 	font-weight: bold;
 	color: black;
-} .bold-text:hover {
-	color: black;
+	&:hover {
+		color: black;
+	}
 }
 
 .dash-feature-container {
-	margin-left: -16px;
-	margin-right: -16px;
-	margin-top: -16px;
-	margin-bottom: -15px;
+	margin: -16px -16px -15px -16px;
 }
 
 .feature {
-	width: 264px;
-	height: 100px;
+	@include size(264px, 100px);
 }
 
 .force-right {
@@ -133,8 +146,9 @@ body {
 	margin-left: 10px;
 	margin-top: 10px;
 	color: black;
-} .force-right:hover {
-	color: black;
+	&:hover {
+		color: black;
+	}
 }
 
 .force-right-down {
@@ -145,10 +159,8 @@ body {
 }
 
 .photo-suggestion {
-	width: 55px;
-	height: 55px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	@include size(55px);
+	@include border_color_radius();
 	margin-left: -3px;
 }
 
@@ -170,10 +182,8 @@ div.float-right {
 }
 
 .photo-messages {
-	width: 60px;
-	height: 60px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	@include size(60px);
+	@include border_color_radius();
 }
 
 div.message-box {
@@ -204,7 +214,7 @@ div.message-box {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	background-color: #eee;
-	/*display: none;*/
+	display: none;
 }
 
 .stream-bar:hover {
@@ -228,40 +238,33 @@ div.message-box {
 }
 
 #reply a:hover, #options a:hover {
-	color: steelblue;
-	text-decoration: none;
+	@include color_no_text_decoration(steelblue);
 }
 
 #retweet a:hover {
-	color: green;
-	text-decoration: none;
+	@include color_no_text_decoration(green);
 }
 
 #favorite a:hover {
-	color: orange;
-	text-decoration: none;
+	@include color_no_text_decoration(orange);
 }
 
 .block {
-	display: inline-block;
-	vertical-align: top;
+	@include display_and_vertical_align();
 	height: auto;
 }
 
 .tweeter-photo, .suggestion-photo, .direct-msg-photo {
 	background-color: steelblue;
-	width: 55px;
-	height: 55px;
+	@include size(55px);
 	border-radius: 5px;
 	display: inline-block;
 }
 
 .tweet-content, .direct-msg-content {
-	display: inline-block;
-	vertical-align: top;
 	/*background-color: tomato;*/
-	width: 88%;
-	height: auto;
+	@include display_and_vertical_align();
+	@include size(88%, auto);
 	padding-left: 5px;
 }
 
@@ -280,10 +283,8 @@ div.message-box {
 }
 
 .suggestion-details {
-	display: inline-block;
-	vertical-align: top;
-	width: 74%;
-	height: auto;
+	@include display_and_vertical_align();
+	@include size(74%, auto);
 }
 
 .suggestion-container {
@@ -310,8 +311,7 @@ div.message-box {
 }
 
 .dash-feature-img img {
-	width: 100%;
-	height: 100px;
+	@include size(100%);
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
@@ -322,17 +322,15 @@ div.message-box {
 
 .dash-profile-photo {
 	background-color: steelblue;
-	width: 60px;
-	height: 60px;
+	@include size(60px);
 	border-radius: 5px;
 	display: inline-block;
 }
 
 .dash-profile-name {
-	display: inline-block;
 	margin-left: 2px;
-	vertical-align: super;
 	width: 71%;
+	@include display_and_vertical_align(inline-block, super);
 }
 
 .dash-profile-name h5 {
@@ -376,8 +374,7 @@ div.message-box {
 }
 
 .dash-profile-details:hover, .dash-profile-details:hover > span {
-	text-decoration: none;
-	color: steelblue;
+	@include color_no_text_decoration(steelblue);
 }
 
 .the-panel-title {
@@ -395,8 +392,7 @@ div.message-box {
 	background-color: tomato;
 	margin-left: -15px;
 	margin-top: -15px;
-	width: 105.2%;
-	height: 125px;
+	@include size(105.2%, 125px);
 }
 
 .profile-modal-details-container {
@@ -405,18 +401,20 @@ div.message-box {
 
 .profile-photo-modal {
 	background-color: steelblue;
-	width: 75px;
-	height: 75px;
+	@include size(75px);
 	border-radius: 5px;
 	display: inline-block;
 }
 
 .profile-details-modal {
-	display: inline-block;
 	margin-left: 2px;
-	vertical-align: super;
+	@include display_and_vertical_align(inline-block, super);
 }
 
 .profile-summary-btn {
 	display: inline-block;
+}
+
+.flash-notification {
+	background-color: white;
 }
