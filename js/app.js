@@ -2,7 +2,7 @@ var Twitter = {};
 
 Twitter.showNewTweets = function(howMany) {
 	$("div.stream-bar").remove();
-	var notification = '<div class="stream-bar">View ';
+	var notification = '<div id="new-tweets" class="stream-bar">View ';
 
 	if(typeof(howMany) === 'undefined')
 		howMany = 1;
@@ -12,8 +12,15 @@ Twitter.showNewTweets = function(howMany) {
 	else
 		 notification+= howMany + ' new Tweets</div>';
 	$("div.the-panel-title").after(notification);
+	$("div.stream-bar").slideDown();
 };
 
 Twitter.hideNewTweets = function() {
-	$("div.stream-bar").remove();
-}
+	$("div.stream-bar").slideUp(function () {
+		$("div.stream-bar").remove();
+	});
+};
+
+$( "#new-tweets" ).click(function() {
+  $(this).slideUp();
+});
