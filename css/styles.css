@@ -86,8 +86,8 @@ body {
   height: 65px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-top: -10px;
-  margin-left: -3px; }
+  margin-left: -3px;
+  margin-top: -10px; }
 
 .bold-text {
   font-weight: bold;
@@ -114,8 +114,8 @@ body {
 .force-right-down {
   position: fixed;
   float: right;
-  margin-top: 35px;
-  margin-left: 10px; }
+  margin-left: 10px;
+  margin-top: 35px; }
 
 .photo-suggestion {
   width: 55px;

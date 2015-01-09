@@ -18,6 +18,17 @@
 	display: $mode;
 	vertical-align: $align;
 }
+
+@mixin margin_top_margin_left($left, $top: $left) {
+	margin-left: $left;
+	margin-top: $top;
+}
+
+@mixin position_fixed_float_right_margin_top_margin_left($left, $top: $left) {
+	position: fixed;
+	float: right;
+	@include margin_top_margin_left($left, $top);
+}
 /* ****** ****** ****** */
 
 body {
@@ -120,8 +131,7 @@ body {
 .photo-left-dashboard {
 	@include size(65px);
 	@include border_color_radius();
-	margin-top: -10px;
-	margin-left: -3px;
+	@include margin_top_margin_left(-3px, -10px);
 }
 
 .bold-text {
@@ -141,10 +151,7 @@ body {
 }
 
 .force-right {
-	position: fixed;
-	float: right;
-	margin-left: 10px;
-	margin-top: 10px;
+	@include position_fixed_float_right_margin_top_margin_left(10px);
 	color: black;
 	&:hover {
 		color: black;
@@ -152,10 +159,7 @@ body {
 }
 
 .force-right-down {
-	position: fixed;
-	float: right;
-	margin-top: 35px;
-	margin-left: 10px;
+	@include position_fixed_float_right_margin_top_margin_left(10px, 35px);
 }
 
 .photo-suggestion {
@@ -390,8 +394,7 @@ div.message-box {
 
 .feature-modal-photo {
 	background-color: tomato;
-	margin-left: -15px;
-	margin-top: -15px;
+	@include margin_top_margin_left(-15px);
 	@include size(105.2%, 125px);
 }
 
