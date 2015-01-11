@@ -281,24 +281,19 @@
                 
                 <!-- <div class="stream-bar">View 4 new Tweets</div> -->
                 
-                <div class="stream-view">
+                <div class="stream-view" ng-controller="StreamCtrl as stream">
                   <ul class="list-unstyled">
 
                     <!-- TWEET BOX -->
-                    <li class="stream-tweet">
+                    <li class="stream-tweet" ng-repeat="tweet in stream.tweets">
                       <div class="tweet-container">
                         <div class="tweeter-photo"></div>
                         <div class="tweet-content">
                           <div class="tweeter-name">
-                            <a class="tweeter-sender-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
-                            <small>- <a href="#">45s</a></small>
+                            <a class="tweeter-sender-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>{{tweet.user}}</strong><small class="text-muted">{{tweet.username}}</small></a>
+                            <small>- <a href="#">{{tweet.time}}</a></small>
                           </div>
-                          <div class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                          <div class="tweet-text">{{tweet.tweet}}</div>
                           <div class="tweet-action">
                             <ul class="list-unstyled list-inline">
                               <li id="reply"><a href="#"><div><span class="glyphicon glyphicon-new-window"></span></div></a></li>
@@ -311,30 +306,6 @@
                       </div>
                     </li>
                     <!-- end of TWEET BOX -->
-                    <!-- TWEET BOX -->
-                    <li class="stream-tweet">
-                      <div class="tweet-container">
-                        <div class="tweeter-photo"></div>
-                        <div class="tweet-content">
-                          <div class="tweeter-name">
-                            <a class="tweeter-sender-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
-                            <small>- <a href="#">1m</a></small>
-                          </div>
-                          <div class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua.</div>
-                          <div class="tweet-action">
-                            <ul class="list-unstyled list-inline">
-                              <li id="reply"><a href="#"><div><span class="glyphicon glyphicon-new-window"></span></div></a></li>
-                              <li id="retweet"><a href="#"><div><span class="glyphicon glyphicon-retweet"></span><span class="bdg-mrg">2</span></div></li>
-                              <li id="favorite"><a href="#"><div><span class="glyphicon glyphicon-asterisk"></span><span class="bdg-mrg">2</span></div></a></li>
-                              <li id="options"><a href="#"><div><span class="glyphicon glyphicon-minus"></span></span></div></a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <!-- end of TWEET BOX -->
-
                   </ul>
                 </div>
 
