@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="twitter">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -261,18 +261,9 @@
             <div class="panel panel-default">
               <div class="panel-body">
                 <div><span><h4 class="text-muted">Worldwide Trends<small> - <a href="#">Change</a></small></h4></span></div>
-                <div>
+                <div ng-controller="WWTrendsCtrl as wwtrends">
                   <ul class="list-unstyled">
-                    <li><a href="#">#AskSuperwomanLIVE</a></li>
-                    <li><a href="#">#OlimpiadasDoRangelPt1</a></li>
-                    <li><a href="#">#TodoBienHastaQue</a></li>
-                    <li><a href="#">#5HNoPontoPop</a></li>
-                    <li><a href="#">#yourefired</a></li>
-                    <li><a href="#">John O'Shea</a></li>
-                    <li><a href="#">Richard Flanagan</a></li>
-                    <li><a href="#">Lorik Cana</a></li>
-                    <li><a href="#">Chiles</a></li>
-                    <li><a href="#">Lord Sugar</a></li>
+                    <li ng-repeat="trend in wwtrends.trends track by $index"><a href="#">{{trend}}</a></li>
                   </ul>
                 </div>
               </div>
@@ -430,6 +421,7 @@
         </div>
       </div>  
 
+
     </div> <!-- end of PAGE COMPONENTS -->
     
 
@@ -437,6 +429,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Import AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    <!-- Importing my JS files -->
+    <script src="js/ajs-app.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

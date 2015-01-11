@@ -1,4 +1,5 @@
 var Twitter = {};
+var $rootScope = angular.element("body").scope();
 
 Twitter.showNewTweets = function(howMany) {
 	$("div.stream-bar").remove();
@@ -20,3 +21,7 @@ Twitter.hideNewTweets = function() {
 		$("div.stream-bar").remove();
 	});
 };
+
+Twitter.changeDashboard = function() {
+	console.log($rootScope);
+}
