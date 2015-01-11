@@ -245,11 +245,11 @@ div.message-box {
 	@include color_no_text_decoration(steelblue);
 }
 
-#retweet a:hover {
+#retweet a:hover, #retweet .retweeted {
 	@include color_no_text_decoration(green);
 }
 
-#favorite a:hover {
+#favorite a:hover, #favorite .favorited {
 	@include color_no_text_decoration(orange);
 }
 

@@ -198,7 +198,7 @@
         <div class="row">
 
           <!-- DASHBOARD -->
-          <div class="col-md-3 dashboard">
+          <div class="col-md-3 dashboard" ng-controller="DashboardCtrl as dashboard">
             <div class="panel panel-default">
               <div class="panel-body">
                 <!-- Feature Photo -->
@@ -222,9 +222,7 @@
                 <!-- Tweets - Following - Followers -->
                 <div>
                   <ul class="list-unstyled list-inline">
-                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>TWEETS</small></span><br><span>46.9K</span></a></li>
-                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>FOLLOWING</small></span><br><span>287</span></a></li>
-                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>FOLLOWERS</small></span><br><span>289</span></a></li>
+                    <li class="text-center" ng-repeat="item in dashboard.content"><a class="dash-profile-details"  href="#"><span class="text-muted"><small>{{item.name | uppercase}}</small></span><br><span>{{item.value}}</span></a></li>
                   </ul>
                 </div>
                  <!-- end of Tweets - Following - Followers -->
@@ -301,31 +299,24 @@
           <div class="col-md-3 right-board">
 
             <!-- Find People you know -->
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-controller="WhoToFollowCtrl as suggestions">
               <div class="panel-body">
                 <div><span><h4 class="text-muted">Who to follow<small> - <a href="#">Refresh</a> - <a href="#">View all</a></small></h4></span></div>
 
                 <!-- SUGGESTIONS -->
-                <div class="suggestion-container">
+                <div class="suggestion-container" ng-repeat="suggestion in suggestions.suggestions">
                   <div class="suggestion-photo"></div>
                   <div class="suggestion-details">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami</strong><small class="text-muted">@w9ahmed</small></a>
-                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
+                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>{{suggestion.user}}</strong><small class="text-muted">{{suggestion.username}}</small></a>
+                    <button type="button" class="btn followbtn btn-default">
+                      <span class="glyphicon glyphicon-plus icon-btn"></span>
+                      <span>Follow</span>
+                      <span style="display: none">Following</span>
+                    </button>
                   </div>
                 </div>
                 <!-- end of SUGGESTIONS -->
-                <!-- SUGGESTIONS -->
-                <div class="suggestion-container">
-                  <div class="suggestion-photo"></div>
-                  <div class="suggestion-details">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami</strong><small class="text-muted">@w9ahmed</small></a>
-                    <div><span class="text-muted">Followed by </span><a href="#">Ahmed</a></div>
-                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
-                  </div>
-                </div>
-                <!-- end of SUGGESTIONS --> 
 
                 <!-- POPULAR ACCOUNTS -->
                 <div class="pop-acc">
@@ -373,6 +364,5 @@
     <!-- Importing my JS files -->
     <script src="js/ajs-app.js"></script>
     <script src="js/app.js"></script>
-    <script src="template/navigation.js"></script>
   </body>
 </html>

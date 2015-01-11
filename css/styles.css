@@ -189,11 +189,11 @@ div.message-box {
   color: steelblue;
   text-decoration: none; }
 
-#retweet a:hover {
+#retweet a:hover, #retweet .retweeted {
   color: green;
   text-decoration: none; }
 
-#favorite a:hover {
+#favorite a:hover, #favorite .favorited {
   color: orange;
   text-decoration: none; }
 

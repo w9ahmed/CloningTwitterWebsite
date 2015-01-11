@@ -1,9 +1,41 @@
 (function () {
 	var app = angular.module("twitter", []);
 
+	// Dashboard Controller
+	app.controller('DashboardCtrl', function() {
+		this.content = [
+		{
+			name: 'Tweets',
+			value: '46.9k'
+		},
+		{
+			name: 'Following',
+			value: '306'
+		},
+		{
+			name: 'Followers',
+			value: '305'
+		},
+		];
+	});
+
 	// WorldWide Trends Controller
 	app.controller('WWTrendsCtrl', function() {
 		this.trends = ['#AskSuperwomanLIVE', '#OlimpiadasDoRangelPt1', '#TodoBienHastaQue', '#5HNoPontoPop', '#yourefired', "John O'Shea", 'Richard Flanagan', 'Lorik Cana', 'Chiles', 'Lord Sugar'];
+	});
+
+	// Who to follow Controller
+	app.controller('WhoToFollowCtrl', function() {
+		this.suggestions = [
+			{
+				user: 'Oliver Hardy',
+				username: '@ollie'
+			},
+			{
+				user: 'Laurel Stanley',
+				username: '@stan'
+			}
+		];
 	});
 
 	// Credit and Abouts Controller

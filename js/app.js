@@ -1,8 +1,28 @@
 var Twitter = {};
 var $rootScope = angular.element("body").scope();
 
+$(document).ready(function() {
+	$("button.followbtn").click(function () {
+		$(this).toggleClass("btn-default");
+		$(this).toggleClass("btn-primary");
+		var span1 = $(this).children("span")[1];
+		$(span1).toggle();
+		var span2 = $(this).children("span")[2];
+		$(span2).toggle();
+	});
+
+	$("#retweet a").click(function() {
+		$(this).toggleClass("retweeted")
+	});
+
+	$("#favorite a").click(function() {
+		$(this).toggleClass("favorited")
+	});
+});
+
+/* ***** Commands ***** */
+
 Twitter.showNewTweets = function(howMany) {
-	$("div.stream-bar").remove();
 	var notification = '<div class="stream-bar">View ';
 
 	if(typeof(howMany) === 'undefined')
@@ -12,8 +32,15 @@ Twitter.showNewTweets = function(howMany) {
 		 notification+= howMany + ' new Tweet</div>';
 	else
 		 notification+= howMany + ' new Tweets</div>';
-	$("div.the-panel-title").after(notification);
-	$("div.stream-bar").slideDown();
+
+	if($("div.stream-bar").length == 0) {
+		$("div.the-panel-title").after(notification);
+		$("div.stream-bar").slideDown();
+	} else {
+		$("div.stream-bar").remove();
+		$("div.the-panel-title").after(notification);
+		$("div.stream-bar").show();
+	}
 };
 
 Twitter.hideNewTweets = function() {
@@ -21,7 +48,3 @@ Twitter.hideNewTweets = function() {
 		$("div.stream-bar").remove();
 	});
 };
-
-Twitter.changeDashboard = function() {
-	console.log($rootScope);
-}

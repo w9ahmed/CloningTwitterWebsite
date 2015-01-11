@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="twitter">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -191,7 +191,7 @@
           <!-- end of NOTIFICATIONS -->
 
           <!-- SUGGESTIONS AND COPYRIGHTS -->
-          <div class="col-md-3 right-board">
+          <div class="col-md-3 right-board" ng-controller="WhoToFollowCtrl as suggestions">
 
             <!-- Find People you know -->
             <div class="panel panel-default">
@@ -199,26 +199,15 @@
                 <div><span><h4 class="text-muted">Who to follow<small> - <a href="#">Refresh</a> - <a href="#">View all</a></small></h4></span></div>
 
                 <!-- SUGGESTIONS -->
-                <div class="suggestion-container">
+                <div class="suggestion-container" ng-repeat="suggestion in suggestions.suggestions">
                   <div class="suggestion-photo"></div>
                   <div class="suggestion-details">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami</strong><small class="text-muted">@w9ahmed</small></a>
+                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>{{suggestion.user}}</strong><small class="text-muted">{{suggestion.username}}</small></a>
                     <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
                   </div>
                 </div>
                 <!-- end of SUGGESTIONS -->
-                <!-- SUGGESTIONS -->
-                <div class="suggestion-container">
-                  <div class="suggestion-photo"></div>
-                  <div class="suggestion-details">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>Ahmed Sami</strong><small class="text-muted">@w9ahmed</small></a>
-                    <div><span class="text-muted">Followed by </span><a href="#">Ahmed</a></div>
-                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus icon-btn"></span>Follow</button>
-                  </div>
-                </div>
-                <!-- end of SUGGESTIONS --> 
 
                 <!-- POPULAR ACCOUNTS -->
                 <div class="pop-acc">
@@ -239,24 +228,9 @@
 
             <!-- Copyrights and Twitter related links -->
             <div class="panel panel-default">
-              <div class="panel-body">
+              <div class="panel-body" ng-controller="AboutsCtrl as credits">
                 <ul class="list-unstyled list-inline">
-                  <li class="text-muted">&copy; 2014 Twitter</li>
-                  <li><a class="text-muted" href="#">About</a></li>
-                  <li><a class="text-muted" href="#">Help</a></li>
-                  <li><a class="text-muted" href="#">Terms</a></li>
-                  <li><a class="text-muted" href="#">Privacy</a></li>
-                  <li><a class="text-muted" href="#">Cookies</a></li>
-                  <li><a class="text-muted" href="#">Ads info</a></li>
-                  <li><a class="text-muted" href="#">Brand</a></li>
-                  <li><a class="text-muted" href="#">Blog</a></li>
-                  <li><a class="text-muted" href="#">Status</a></li>
-                  <li><a class="text-muted" href="#">Apps</a></li>
-                  <li><a class="text-muted" href="#">Jobs</a></li>
-                  <li><a class="text-muted" href="#">Advertise</a></li>
-                  <li><a class="text-muted" href="#">Businesses</a></li>
-                  <li><a class="text-muted" href="#">Media</a></li>
-                  <li><a class="text-muted" href="#">Developers</a></li>
+                  <li ng-repeat="content in credits.contents track by $index" class="text-muted">{{content}}</li>
                 </ul>
               </div>
             </div>
@@ -275,5 +249,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Import AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    <!-- Importing my JS files -->
+    <script src="js/ajs-app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
