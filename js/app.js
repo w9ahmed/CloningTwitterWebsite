@@ -16,11 +16,11 @@ $(document).ready(function() {
 	});
 
 	$("#retweet a").click(function() {
-		$(this).toggleClass("retweeted")
+		$(this).toggleClass("retweeted");
 	});
 
 	$("#favorite a").click(function() {
-		$(this).toggleClass("favorited")
+		$(this).toggleClass("favorited");
 	});
 });
 

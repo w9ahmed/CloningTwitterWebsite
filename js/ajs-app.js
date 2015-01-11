@@ -1,6 +1,7 @@
 (function () {
 	var app = angular.module("twitter", []);
 
+	/* ***************	CONTROLLERS	*************** */
 	// Dashboard Controller
 	app.controller('DashboardCtrl', function() {
 		this.content = [
@@ -97,6 +98,30 @@
 			time: 'Aug 20'
 		}
 		];
+	});	
+	/* *************** 	***********	*************** */
+
+	/* ***************	DIRECTIVES	*************** */
+	app.directive('navigation', function() {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/navigation.html'
+		}
 	});
+
+	app.directive('credits', function() {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/credits.html'
+		}
+	});
+
+	app.directive('wwtrends', function() {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/wwtrends.html'
+		}
+	});
+	/* *************** 	**********	*************** */
 
 })();

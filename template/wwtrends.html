@@ -1,0 +1,12 @@
+<!-- Worldwide Trends -->
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div><span><h4 class="text-muted">Worldwide Trends<small> - <a href="#">Change</a></small></h4></span></div>
+    <div ng-controller="WWTrendsCtrl as wwtrends">
+      <ul class="list-unstyled">
+        <li ng-repeat="trend in wwtrends.trends track by $index"><a href="#">{{trend}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end of Worldwide Trends -->
