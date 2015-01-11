@@ -119,7 +119,7 @@
       <!-- END OF NEW TWEET MODAL -->
 
       <!-- DIRECT MESSAGES MODAL -->
-      <div class="modal fade" id="directMessages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="directMessages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="DMCtrl as directmessages">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -133,36 +133,19 @@
                 <ul class="list-unstyled direct-msgs">
 
                   <!-- MESSAGE VIEW -->
-                  <li>
+                  <li ng-repeat="message in directmessages.messages">
                     <div class="direct-msg-container">
                       <div class="direct-msg-photo"></div>
                       <div class="direct-msg-content">
                         <div class="sender-name">
-                          <a class="msg-sender-details" href="#"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
-                          <small class="pull-right">Oct 23</small>
+                          <a class="msg-sender-details" href="#"><strong>{{message.user}}</strong><small class="text-muted">{{message.username}}</small></a>
+                          <small class="pull-right">{{message.time}}</small>
                         </div>
-                        <div class="direct-msg-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="direct-msg-text">{{message.message}}</div>
                       </div>
                     </div>
                   </li>
                   <!-- end of MESSAGE VIEW -->
-                  <!-- MESSAGE VIEW -->
-                  <li>
-                    <div class="direct-msg-container">
-                      <div class="direct-msg-photo"></div>
-                      <div class="direct-msg-content">
-                        <div class="sender-name">
-                          <a class="msg-sender-details" href="#"><strong>Ahmed Sami Mohamed</strong><small class="text-muted">@w9ahmed</small></a>
-                          <small class="pull-right">Oct 23</small>
-                        </div>
-                        <div class="direct-msg-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.</div>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- end of MESSAGE VIEW -->
-
                 </ul>
               </div>
             </div>
@@ -363,24 +346,9 @@
 
             <!-- Copyrights and Twitter related links -->
             <div class="panel panel-default">
-              <div class="panel-body">
+              <div class="panel-body" ng-controller="AboutsCtrl as credits">
                 <ul class="list-unstyled list-inline">
-                  <li class="text-muted">&copy; 2014 Twitter</li>
-                  <li><a class="text-muted" href="#">About</a></li>
-                  <li><a class="text-muted" href="#">Help</a></li>
-                  <li><a class="text-muted" href="#">Terms</a></li>
-                  <li><a class="text-muted" href="#">Privacy</a></li>
-                  <li><a class="text-muted" href="#">Cookies</a></li>
-                  <li><a class="text-muted" href="#">Ads info</a></li>
-                  <li><a class="text-muted" href="#">Brand</a></li>
-                  <li><a class="text-muted" href="#">Blog</a></li>
-                  <li><a class="text-muted" href="#">Status</a></li>
-                  <li><a class="text-muted" href="#">Apps</a></li>
-                  <li><a class="text-muted" href="#">Jobs</a></li>
-                  <li><a class="text-muted" href="#">Advertise</a></li>
-                  <li><a class="text-muted" href="#">Businesses</a></li>
-                  <li><a class="text-muted" href="#">Media</a></li>
-                  <li><a class="text-muted" href="#">Developers</a></li>
+                  <li ng-repeat="content in credits.contents track by $index" class="text-muted">{{content}}</li>
                 </ul>
               </div>
             </div>
@@ -405,5 +373,6 @@
     <!-- Importing my JS files -->
     <script src="js/ajs-app.js"></script>
     <script src="js/app.js"></script>
+    <script src="template/navigation.js"></script>
   </body>
 </html>
