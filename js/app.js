@@ -11,6 +11,10 @@ $(document).ready(function() {
 		$(span2).toggle();
 	});
 
+	$("span.close").click(function () {
+		console.log("HJ");
+	});
+
 	$("#retweet a").click(function() {
 		$(this).toggleClass("retweeted")
 	});
