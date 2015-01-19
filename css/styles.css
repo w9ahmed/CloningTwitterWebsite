@@ -52,7 +52,7 @@ body {
   margin-right: 15px;
   /*margin-left: 10px;*/
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px; }
 
 .navbar-profile img {
@@ -84,7 +84,7 @@ body {
 .photo-left-dashboard {
   width: 65px;
   height: 65px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px;
   margin-left: -3px;
   margin-top: -10px; }
@@ -120,7 +120,7 @@ body {
 .photo-suggestion {
   width: 55px;
   height: 55px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px;
   margin-left: -3px; }
 
@@ -140,7 +140,7 @@ div.float-right {
 .photo-messages {
   width: 60px;
   height: 60px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px; }
 
 div.message-box {
@@ -333,6 +333,16 @@ div.message-box {
   display: inline-block; }
 
 .flash-notification {
-  background-color: white; }
-
-/*# sourceMappingURL=styles.css.map */
+  top: 55px;
+  z-index: 1;
+  display: none;
+  color: #c8c8c8;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  background-color: white;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 500px;
+  height: 55px;
+  box-shadow: 0 1px 5px #888888; }

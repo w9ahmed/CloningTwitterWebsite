@@ -419,5 +419,16 @@ div.message-box {
 }
 
 .flash-notification {
+	top: 55px;
+	z-index: 1;
+	display: none;
+	color: #c8c8c8;
+	line-height: 50px;
+	text-align: center;
+	position: absolute;
 	background-color: white;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	@include size(500px, 55px);
+	box-shadow: 0 1px 5px #888888;
 }
