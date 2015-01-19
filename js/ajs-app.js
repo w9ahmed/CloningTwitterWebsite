@@ -122,6 +122,20 @@
 			templateUrl: '../template/wwtrends.html'
 		}
 	});
+
+	app.directive('flash', function () {
+		return {
+			restrict: 'E',
+			scope: true,
+			template: '<div class="panel flash-notification">Your Tweet was posted!</div>',
+			controller: function() {
+				$('.flash-notification').click(function() {
+					$('.flash-notification').fadeOut();
+					$('.navbar').removeClass('shadow-down');
+				});
+			}
+		};
+	});
 	/* *************** 	**********	*************** */
 
 })();

@@ -22,11 +22,6 @@ $(document).ready(function() {
 	$("#favorite a").click(function() {
 		$(this).toggleClass("favorited");
 	});
-
-	$('.flash-notification').click(function() {
-		$('.flash-notification').fadeOut();
-		$('.navbar').removeClass('shadow-down');
-	});
 });
 
 /* ***** Commands ***** */
