@@ -65,7 +65,7 @@ body {
 
 .nav li div {
 	@include size(inherit, 5px);
-	background: #fff;
+	background: #f8f8f8;
 	margin-bottom: -1px;
 	/*margin-top: -4px;*/
 }
@@ -430,5 +430,9 @@ div.message-box {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	@include size(500px, 55px);
-	box-shadow: 0 1px 5px #888888;
+	box-shadow: 0 1px 5px #888;
+}
+
+.shadow-down {
+	box-shadow: 0 1px 5px #888;
 }
