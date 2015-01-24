@@ -1,7 +1,6 @@
-var connect = require('connect'),
-    serveStatic = require('serve-static');
+var connect = require('connect');
+var serveStatic = require('serve-static');
 
-var app = connect();
-
-app.use(serveStatic("../CloningTwitterWebsite "));
-app.listen(5000);
+connect().use(
+    serveStatic("../CloningTwitterWebsite")
+).listen(5000);
