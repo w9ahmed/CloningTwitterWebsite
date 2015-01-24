@@ -109,6 +109,13 @@
 		}
 	});
 
+	app.directive('tweetStream', function () {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/tweet-stream.html'
+		}
+	});
+
 	app.directive('credits', function() {
 		return {
 			restrict: 'E',

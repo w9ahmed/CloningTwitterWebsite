@@ -178,46 +178,7 @@
           </div>
           <!-- end of DASHBOARD -->
 
-          <!-- TWEETS -->
-          <div class="col-md-6 tweets-view">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <div class="the-panel-title"><h4 class="text-muted">Tweets</h4></div>
-                
-                <!-- <div class="stream-bar">View 4 new Tweets</div> -->
-                
-                <div class="stream-view" ng-controller="StreamCtrl as stream">
-                  <ul class="list-unstyled">
-
-                    <!-- TWEET BOX -->
-                    <li class="stream-tweet" ng-repeat="tweet in stream.tweets">
-                      <div class="tweet-container">
-                        <div class="tweeter-photo"></div>
-                        <div class="tweet-content">
-                          <div class="tweeter-name">
-                            <a class="tweeter-sender-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>{{tweet.user}}</strong><small class="text-muted">{{tweet.username}}</small></a>
-                            <small>- <a href="#">{{tweet.time}}</a></small>
-                          </div>
-                          <div class="tweet-text">{{tweet.tweet}}</div>
-                          <div class="tweet-action">
-                            <ul class="list-unstyled list-inline">
-                              <li id="reply"><a href="#"><div><span class="glyphicon glyphicon-new-window"></span></div></a></li>
-                              <li id="retweet"><a href="#"><div><span class="glyphicon glyphicon-retweet"></span><span class="bdg-mrg">{{tweet.retweets}}</span></div></li>
-                              <li id="favorite"><a href="#"><div><span class="glyphicon glyphicon-asterisk"></span><span class="bdg-mrg">{{tweet.favorites}}</span></div></a></li>
-                              <li id="options"><a href="#"><div><span class="glyphicon glyphicon-minus"></span></span></div></a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <!-- end of TWEET BOX -->
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <!-- end of TWEETS -->
+          <tweet-stream></tweet-stream>
 
           <!-- SUGGESTIONS AND COPYRIGHTS -->
           <div class="col-md-3 right-board">
