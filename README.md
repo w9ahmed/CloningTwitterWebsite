@@ -9,5 +9,6 @@ The project now uses nodeJS, so make sure you have node installed.
 
 * sudo apt-get install node
 * sudo apt-get install npm
-* sudo npm install serve-static
+* npm install connect
+* npm install serve-static
 
