@@ -18,74 +18,8 @@
   </head>
   <body>
     <flash></flash>
-    <!-- Navigation Bar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <!-- NB container -->
-      <div class="container">
 
-        <!-- Navigation Bar main Components -->
-        <div>
-          <ul class="nav navbar-nav">
-            <li><a href="index.html"><span class="glyphicon glyphicon-home icon-btn"></span>Home</a><div class="actives"></div></li>
-            <li class="active"><a href="notifications.html"><span class="glyphicon glyphicon-bell icon-btn"></span>Notifications</a><div></div></li>
-            <li><a href="#"><span class="glyphicon glyphicon-envelope icon-btn"></span>Messages</a><div></div></li>
-            <li><a href="discover.html"><span class="glyphicon glyphicon-bullhorn icon-btn"></span>Discover</a><div></div></li>
-          </ul>
-        </div> <!-- end of Navigation Bar Components -->
-
-        <div class="navbar-text navbar-left mid-icon">
-          <!-- <span class="glyphicon glyphicon-send"></span> -->
-          <img class="navbar-img" src="img\favicon.png">
-        </div>
-
-        <!-- Right area of Navigation Bar -->
-        <div class="navbar-right">
-            <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#composeNewTweet"><span class="glyphicon glyphicon-pencil icon-btn"></span>Tweet</button>
-        </div>
-
-        <div class="navbar-right">
-          <div class="navbar-profile">
-            <div class="btn-group">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/me-alex-shades.jpg"></a>
-              <ul class="dropdown-menu profile-drop" role="menu">
-                <li class="profile-drop-view">
-                  <a href="#"><h5>Ahmed Sami Mohamed</h5><span class="text-muted"><small>View Profile</small></span></a>                  
-                </li>
-                <li class="divider"></li>
-                <li><a href="#">Lists</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Keyboard shortcuts</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Sign out</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="navbar-right search-form">
-
-          <div>
-            <form class="navbar-form hidden-xs" role="search">
-              <div class="row">
-                <div class="">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Twitter">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">
-                        <span class="glyphicon glyphicon-search"></span>
-                      </button>
-                    </span>
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 -->
-              </div>
-            </form>
-          </div>
-        </div> <!-- Right area of Navigation Bar -->
-
-      </div> <!-- end of NB container -->
-    </div> <!-- end of Navigation Bar -->
+    <navigation></navigation>
 
     <!-- PAGE COMPONENTS -->  
     <div class="container page-components">
@@ -152,27 +86,7 @@
               </ul>
             </div>
 
-            <!-- Worldwide Trends -->
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <div><span><h4 class="text-muted">Worldwide Trends<small> - <a href="#">Change</a></small></h4></span></div>
-                <div>
-                  <ul class="list-unstyled">
-                    <li><a href="#">#AskSuperwomanLIVE</a></li>
-                    <li><a href="#">#OlimpiadasDoRangelPt1</a></li>
-                    <li><a href="#">#TodoBienHastaQue</a></li>
-                    <li><a href="#">#5HNoPontoPop</a></li>
-                    <li><a href="#">#yourefired</a></li>
-                    <li><a href="#">John O'Shea</a></li>
-                    <li><a href="#">Richard Flanagan</a></li>
-                    <li><a href="#">Lorik Cana</a></li>
-                    <li><a href="#">Chiles</a></li>
-                    <li><a href="#">Lord Sugar</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- end of Worldwide Trends -->
+            <wwtrends></wwtrends>
 
           </div>
           <!-- end of DASHBOARD -->
