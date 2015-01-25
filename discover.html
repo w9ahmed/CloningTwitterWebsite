@@ -24,33 +24,8 @@
     <!-- PAGE COMPONENTS -->  
     <div class="container page-components">
 
-      <!-- NEW TWEET MODAL -->
-        <div class="modal fade" id="composeNewTweet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <div class="modal-title text-center"><span>Compose new Tweet</span></div>
-              </div>
-              <div class="modal-body bg-info">
-                <div class="panel panel-default">
-                  <textarea class="form-control new-tweet-input" rows="4"></textarea>
-                </div>
-              </div>
-              <div class="modal-footer bg-info">
-                  <div class="pull-left">
-                    <button type="button" class="btn btn-default pull-left"><span class="glyphicon glyphicon-camera icon-btn"></span>Add photo</button>
-                    <button type="button" class="btn btn-default pull-left"><span class="glyphicon glyphicon-map-marker icon-btn"></span>Add location</button>
-                  </div>
-                  <div class=" pull-right">
-                    <button type="button" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-pencil icon-btn"></span>Tweet</button>
-                    <div class="pull-right text-count"><p class="text-muted">140</p></div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <!-- END OF NEW TWEET MODAL -->
+      <new-tweet></new-tweet>
+      <direct-messages></direct-messages>
 
       <div class="fluid-container">
         <div class="row">
@@ -94,20 +69,7 @@
               <div class="panel-body">
                 <div><span><h4 class="text-muted">Who to follow<small> - <a href="#">Refresh</a> - <a href="#">View all</a></small></h4></span></div>
 
-                <!-- SUGGESTIONS -->
-                <div class="suggestion-container" ng-repeat="suggestion in suggestions.suggestions">
-                  <div class="suggestion-photo"></div>
-                  <div class="suggestion-details">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>{{suggestion.user}}</strong><small class="text-muted">{{suggestion.username}}</small></a>
-                    <button type="button" class="btn followbtn btn-default">
-                      <span class="glyphicon glyphicon-plus icon-btn"></span>
-                      <span>Follow</span>
-                      <span style="display: none">Following</span>
-                    </button>
-                  </div>
-                </div>
-                <!-- end of SUGGESTIONS -->
+                <suggestions></suggestions>
 
                 <!-- POPULAR ACCOUNTS -->
                 <div class="pop-acc">

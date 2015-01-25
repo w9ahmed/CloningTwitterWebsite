@@ -1,0 +1,40 @@
+<!-- DIRECT MESSAGES MODAL -->
+<div class="modal fade" id="directMessages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="DMCtrl as directmessages">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title text-muted" id="myModalLabel">Direct Messages</h4>
+        <!-- <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span></button> -->
+        <!-- <button type="button" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-pencil icon-btn"></span>New message</button> -->
+      </div>
+      <div class="modal-body">
+        <div class="md">
+          <ul class="list-unstyled direct-msgs">
+
+            <!-- MESSAGE VIEW -->
+            <li ng-repeat="message in directmessages.messages">
+              <div class="direct-msg-container">
+                <div class="direct-msg-photo"></div>
+                <div class="direct-msg-content">
+                  <div class="sender-name">
+                    <a class="msg-sender-details" href="#"><strong>{{message.user}}</strong><small class="text-muted">{{message.username}}</small></a>
+                    <small class="pull-right">{{message.time}}</small>
+                  </div>
+                  <div class="direct-msg-text">{{message.message}}</div>
+                </div>
+              </div>
+            </li>
+            <!-- end of MESSAGE VIEW -->
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="text-center">
+          <span class="text-muted"><small>Tip: you can send a message to anyone who follows you. <a href="#">Learn more</a></small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of DIRECT MESSAGES MODAL -->

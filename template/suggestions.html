@@ -1,0 +1,14 @@
+<!-- SUGGESTIONS -->
+<div class="suggestion-container" ng-repeat="suggestion in suggestions.suggestions">
+  <div class="suggestion-photo"></div>
+  <div class="suggestion-details">
+    <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <a class="sugg-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>{{suggestion.user}}</strong><small class="text-muted">{{suggestion.username}}</small></a>
+    <button type="button" class="btn followbtn btn-default">
+      <span class="glyphicon glyphicon-plus icon-btn"></span>
+      <span>Follow</span>
+      <span style="display: none">Following</span>
+    </button>
+  </div>
+</div>
+<!-- end of SUGGESTIONS -->

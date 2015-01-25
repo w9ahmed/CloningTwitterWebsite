@@ -116,6 +116,27 @@
 		}
 	});
 
+	app.directive('newTweet', function () {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/new-tweet.html'
+		}
+	});
+
+	app.directive('directMessages', function () {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/direct-messages.html'
+		}
+	});
+
+	app.directive('suggestions', function() {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/suggestions.html'
+		}
+	});
+
 	app.directive('credits', function() {
 		return {
 			restrict: 'E',
