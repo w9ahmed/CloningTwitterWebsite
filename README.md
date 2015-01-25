@@ -13,6 +13,7 @@ The project now uses nodeJS, so make sure you have node installed.
 * npm install serve-static
 
 After installing all of these, go to the project directory and run:
-* nodejs server.js
+* nodejs server.js ( or node server.js) [depends on your installation]
+* (in case you want to change it from nodejs to node) sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 then go to http://localhost:5000/index.html
