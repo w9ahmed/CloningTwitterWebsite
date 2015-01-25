@@ -130,6 +130,20 @@
 		}
 	});
 
+	app.directive('dashboardProfile', function () {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/dashboard-profile.html'
+		}
+	});
+
+	app.directive('tweeterProfile', function () {
+		return {
+			restrict: 'E',
+			templateUrl: '../template/tweeter-profile.html'
+		}
+	});
+
 	app.directive('suggestions', function() {
 		return {
 			restrict: 'E',

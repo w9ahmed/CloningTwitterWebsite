@@ -17,7 +17,7 @@
     <![endif]-->
   </head>
   <body>
-	<!-- Remember to add Screenshots on GitHub -->
+	
   <flash></flash>
 
   <navigation></navigation>
@@ -27,86 +27,15 @@
 
       <new-tweet></new-tweet>
       <direct-messages></direct-messages>
-
-      <!-- OPEN TWEETER PROFILE -->
-      <!-- Modal -->
-      <div class="modal fade" id="showTweeterProfile" tabindex="-1" role="dialog" aria-labelledby="showTweeterProfile" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-              <h4 class="modal-title text-muted text-center" id="myModalLabel">Profile summary</h4>
-            </div>
-            <div class="modal-body">
-              <div class="feature-modal-photo"></div>
-              <div class="profile-modal-details-container">
-                <div class="profile-photo-modal"></div>
-                <div class="profile-details-modal">
-                  <ul class="list-unstyled list-inline">
-                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>TWEETS</small></span><br><span>46.9K</span></a></li>
-                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>FOLLOWING</small></span><br><span>287</span></a></li>
-                    <li class="text-center"><a class="dash-profile-details" href="#"><span class="text-muted"><small>FOLLOWERS</small></span><br><span>289</span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="dash-profile-name">
-                <a href="#"><h5>Ahmed Sami Mohamed</h5></a>
-                <a href="#"><small class="text-muted">@w9ahmed</small></a>
-              </div>
-              <div>Description</div>
-            </div>
-            <div class="modal-footer">
-              <a class="pull-left" href="#"><strong>Go to full profile</strong></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END OPEN TWEETER PROFILE -->
+      <tweeter-profile></tweeter-profile>
 
       <div class="fluid-container">
         <div class="row">
 
           <!-- DASHBOARD -->
-          <div class="col-md-3 dashboard" ng-controller="DashboardCtrl as dashboard">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <!-- Feature Photo -->
-                <div class="dash-feature-container">
-                  <a class="dash-feature-img" href="#"><img src="img\fermer.jpg"></a>
-                </div>
-                <!-- end of Feature Photo -->
+          <div class="col-md-3 dashboard">
 
-                <!-- Photo - Name - username -->
-                <div class="dashboard-profile">
-                  <div class="dash-profile-container">
-                    <a href="#"><div class="dash-profile-photo"></div></a>
-                    <div class="dash-profile-name">
-                      <a href="#"><h5>Ahmed Sami Mohamed</h5></a>
-                      <a href="#"><small class="text-muted">@w9ahmed</small></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of Photo - Name - username -->
-
-                <!-- Tweets - Following - Followers -->
-                <div>
-                  <ul class="list-unstyled list-inline">
-                    <li class="text-center" ng-repeat="item in dashboard.content"><a class="dash-profile-details"  href="#"><span class="text-muted"><small>{{item.name | uppercase}}</small></span><br><span>{{item.value}}</span></a></li>
-                  </ul>
-                </div>
-                 <!-- end of Tweets - Following - Followers -->
-
-                 <!-- Compose New Tweet - DASHBOARD -->
-                 <div class="bg-info inside-tweet">
-                    <div>
-                      <textarea class="form-control inside-tweet-new-compose" rows="1" placeholder="Compose new Tweet..."></textarea>
-                    </div>
-                 </div>
-                 <!-- end of Compose New Tweet - DASHBOARD -->
-
-              </div>
-            </div>
-
+            <dashboard-profile></dashboard-profile>
             <wwtrends></wwtrends>
 
           </div>

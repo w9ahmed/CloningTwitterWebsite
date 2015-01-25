@@ -12,3 +12,7 @@ The project now uses nodeJS, so make sure you have node installed.
 * npm install connect
 * npm install serve-static
 
+After installing all of these, go to the project directory and run:
+* nodejs server.js
+
+then go to http://localhost:5000/index.html
