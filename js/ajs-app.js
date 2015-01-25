@@ -3,21 +3,13 @@
 
 	/* ***************	CONTROLLERS	*************** */
 	// Dashboard Controller
-	app.controller('DashboardCtrl', function() {
-		this.content = [
-		{
-			name: 'Tweets',
-			value: '46.9k'
-		},
-		{
-			name: 'Following',
-			value: '306'
-		},
-		{
-			name: 'Followers',
-			value: '305'
-		},
-		];
+	app.controller('DashboardCtrl', function($http) {
+		var parent = this;
+		this.content = [];
+		$http.get("../json/user.json")
+			.success(function(data) {
+				parent.content = data;
+			});
 	});
 
 	// WorldWide Trends Controller
@@ -46,36 +38,22 @@
 
 	// Tweets Stream Controller
 	app.controller('StreamCtrl', function($http) {
-		var parent = this;
+		var self = this;
 		this.tweets = [];
 		$http.get("../json/tweets.json")
 			.success(function(data, status) {
-				parent.tweets = data;
+				self.tweets = data;
 			});
 	});
 
 	// Direct Messages Controller
-	app.controller('DMCtrl', function() {
-		this.messages = [
-		{
-			user: 'Ahmed Ezzat',
-			username: '@is7yX',
-			message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-			time: 'Oct 23'
-		},
-		{
-			user: 'Jack McCord',
-			username: '@jackie',
-			message: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-			time: 'Aug 23'
-		},
-		{
-			user: 'Spazie MacGuy',
-			username: '@spazem',
-			message: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-			time: 'Aug 20'
-		}
-		];
+	app.controller('DMCtrl', function($http) {
+		var self = this;
+		this.messages = [];
+		$http.get("../json/messages.json")
+			.success(function(data) {
+				self.messages = data;
+			});
 	});	
 	/* *************** 	***********	*************** */
 
