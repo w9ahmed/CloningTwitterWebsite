@@ -1,0 +1,21 @@
+{
+  "name": "CloningTwitterWebsite",
+  "version": "0.0.0",
+  "homepage": "https://github.com/w9ahmed/CloningTwitterWebsite",
+  "authors": [
+    "Ahmed Sami <wenning9ahmed@hotmail.com>"
+  ],
+  "description": "Cloning the Twitter website to learn front-end development.",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2"
+  }
+}
