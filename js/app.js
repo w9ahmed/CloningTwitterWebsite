@@ -23,7 +23,7 @@ $(document).ready(function() {
 /* ***** Commands ***** */
 
 Twitter.showNewTweets = function(howMany) {
-	var notification = '<div class="stream-bar">View ';
+	var notification = '<div ng-click="show();" class="stream-bar">View ';
 
 	if(typeof(howMany) === 'undefined')
 		howMany = 1;

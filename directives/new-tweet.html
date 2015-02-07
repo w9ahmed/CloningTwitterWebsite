@@ -8,19 +8,21 @@
         </div>
         <div class="modal-body bg-info">
           <div class="panel panel-default">
-            <textarea class="form-control new-tweet-input" rows="4"></textarea>
+            <textarea ng-model="tweet.tweet" class="form-control new-tweet-input" rows="4"></textarea>
           </div>
         </div>
+
         <div class="modal-footer bg-info">
             <div class="pull-left">
               <button type="button" class="btn btn-default pull-left"><span class="glyphicon glyphicon-camera icon-btn"></span>Add photo</button>
               <button type="button" class="btn btn-default pull-left"><span class="glyphicon glyphicon-map-marker icon-btn"></span>Add location</button>
             </div>
             <div class=" pull-right">
-              <button type="button" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-pencil icon-btn"></span>Tweet</button>
+              <button ng-click="sendTweet(tweet)" type="button" class="btn btn-primary pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-pencil icon-btn"></span>Tweet</button>
               <div class="pull-right text-count"><p class="text-muted">140</p></div>
             </div>
         </div>
+
       </div>
     </div>
   </div>

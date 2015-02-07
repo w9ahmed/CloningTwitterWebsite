@@ -1,5 +1,5 @@
 
-var app = angular.module("twitter", ['ngRoute'])
+var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 
 	.config(function($routeProvider, $locationProvider) {
 		$routeProvider
@@ -23,6 +23,9 @@ var app = angular.module("twitter", ['ngRoute'])
 			});
 
 		$locationProvider.html5Mode(true);
+	})
+
+	.constant('angularMomentConfig', {
 	})
 
 	.controller('MainCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
@@ -95,18 +98,18 @@ app.controller('AboutsCtrl', function() {
 });
 
 // Tweets Stream Controller
-app.controller('StreamCtrl', function($scope, $http) {
+app.controller('StreamCtrl', function($scope, $rootScope, $http) {
 	var self = this;
 	this.tweets = [];
 	$http.get("/json/tweets.json")
 		.success(function(data, status) {
 			self.tweets = data;
+			$rootScope.tweets = data;
 		});
-	$scope.header = "Bob";
 });
 
 // Direct Messages Controller
-app.controller('DMCtrl', function($http) {
+app.controller('DMCtrl', function($scope, $rootScope, $http) {
 	var self = this;
 	this.messages = [];
 	$http.get("/json/messages.json")
@@ -148,7 +151,23 @@ app.directive('tweetStream', function () {
 app.directive('newTweet', function () {
 	return {
 		restrict: 'E',
-		templateUrl: 'directives/new-tweet.html'
+		scope: true,
+		templateUrl: 'directives/new-tweet.html',
+		controller: function($scope, $rootScope) {
+
+			$scope.sendTweet = function(tweet) {
+				tweet.time = Date.now();
+				tweet.user = 'Ahmed Sami Mohamed';
+				tweet.username = '@w9ahmed';
+				tweet.retweets = 0;
+				tweet.favorites = 0;
+				tweet.self = true;
+
+				$rootScope.tweets.push(tweet);
+				Twitter.showNewTweets(1);
+			}
+
+		}
 	}
 });
 
@@ -198,12 +217,14 @@ app.directive('flash', function () {
 	return {
 		restrict: 'E',
 		scope: true,
-		template: '<div class="panel flash-notification">Your Tweet was posted!</div>',
-		controller: function() {
-			$('.flash-notification').click(function() {
+		template: '<div ng-click="show" class="panel flash-notification">Your Tweet was posted!</div>',
+		controller: function($scope, $rootScope) {
+
+			$scope.show = function () {
 				$('.flash-notification').fadeOut();
 				$('.navbar').removeClass('shadow-down');
-			});
+			}
+
 		}
 	};
 });
