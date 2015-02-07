@@ -18,9 +18,9 @@ At first, this was a static page, but now I'm adding more functionality to it.
 ### After installing all of these, go to the project directory and run: ###
 * bower install
 * nodejs server.js ( or node server.js) [depends on your installation]
-> (in case you want to change it from nodejs to node) sudo ln -s /usr/bin/nodejs /usr/bin/node
+* (in case you want to change it from nodejs to node) sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 ### Go to:  ###
-http://localhost:5000/index.html
+[http://localhost:5000](http://localhost:5000)
 
 Voilà!

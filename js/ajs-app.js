@@ -3,29 +3,61 @@ var app = angular.module("twitter", ['ngRoute'])
 
 	.config(function($routeProvider, $locationProvider) {
 		$routeProvider
-			.when('/index.html', {
+			.when('/home', {
 				redirectTo: '/'
 			})
 			.when('/', {
 				templateUrl: 'pages/home.html',
-				controller: 'StreamCtrl',
-				controllerAs: 'StreamCtrl'
+				controller: 'HomeCtrl',
+				controllerAs: 'HomeCtrl'
 			})
-			.when('/notifications.html', {
-				templateUrl: 'pages/notifications.html'
+			.when('/notifications', {
+				templateUrl: 'pages/notifications.html',
+				// controller: 'NotificationsCtrl',
+				// controllerAs: 'NotificationsCtrl'
 			})
-			.when('/discover.html', {
-				templateUrl: 'pages/discover.html'
-			})
+			.when('/discover', {
+				templateUrl: 'pages/discover.html',
+				// controller: 'DiscoverCtrl',
+				// controllerAs: 'DiscoverCtrl'
+			});
 
 		$locationProvider.html5Mode(true);
 	})
 
-	.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
+	.controller('MainCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
 			$scope.$route = $route;
 			$scope.$location = $location;
 			$scope.$routeParams = $routeParams;
-	})
+
+			$rootScope.navigation = function(tab) {
+				$('ul.nav li').removeClass('active');
+				$('#' + tab + 'Tab').addClass('active');
+			}
+	});
+
+/* *************** PAGE CONTROLLERS *************** */
+app.controller('HomeCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
+	this.name = 'HomeCtrl';
+	this.$location = $location;
+
+	$rootScope.navigation('home');
+});
+
+app.controller('NotificationsCtrl', function($scope, $route, $routeParams, $location) {
+	this.name = 'NotificationsCtrl';
+	this.$location = $location;
+
+	$rootScope.navigation('noti');
+});
+
+app.controller('DiscoverCtrl', function($scope, $route, $routeParams, $location) {
+	this.name = 'DiscoverCtrl';
+	this.$location = $location;
+
+	$rootScope.navigation('discover');
+});
+/* *************** 	***********	*************** */
 
 /* ***************	CONTROLLERS	*************** */
 // Dashboard Controller
@@ -101,7 +133,7 @@ app.directive('navigation', function() {
 		restrict: 'E',
 		templateUrl: 'directives/navigation.html',
 		controller: function() {
-			
+
 		}
 	}
 });
