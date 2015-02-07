@@ -1,0 +1,23 @@
+{
+  "name": "CloningTwitterWebsite",
+  "version": "0.0.0",
+  "description": "Cloning the Twitter website to learn front-end development.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/w9ahmed/CloningTwitterWebsite.git"
+  },
+  "author": "Ahmed Sami",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/w9ahmed/CloningTwitterWebsite/issues"
+  },
+  "dependencies": {
+    "express": "~4.11.2",
+    "colors": "~1.0.3"
+  }
+}

@@ -1,7 +1,9 @@
+require('colors');
+
 var site = 'CloningTwitterWebsite'; // root folder name
 var port = 5000;
 
-console.log('Running Server for ' + site + '...');
+console.log('Running Server for '.blue + site.yellow + '...'.yellow);
 
 var express = require('express');
 var app = express();
@@ -10,8 +12,8 @@ app.use(express.static('../CloningTwitterWebsite'));
 
 app.listen(port);
 
-console.log('Success...')
-console.log('Running server on port: ' + port);
+console.log('Running server on port: '.blue + port.toString().yellow);
+console.log('Success...'.green)
 
 /* ******** ROUTING ******** */
 

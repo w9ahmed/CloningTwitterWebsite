@@ -9,14 +9,15 @@ At first, this was a static page, but now I'm adding more functionality to it.
 
 * sudo apt-get install node
 * sudo apt-get install npm
-* npm install connect
-* npm install serve-static
 
 ### If you don't have Bower installed: ###
 * npm install -g bower
 
 ### After installing all of these, go to the project directory and run: ###
+* npm install
 * bower install
+
+### To run the server ###
 * nodejs server.js ( or node server.js) [depends on your installation]
 * (in case you want to change it from nodejs to node) sudo ln -s /usr/bin/nodejs /usr/bin/node
 
