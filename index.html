@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
     <title>Twitter</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Bootstrap -->
@@ -18,62 +19,22 @@
   </head>
   <body>
 	
-  <flash></flash>
-
   <navigation></navigation>
+  
+  <flash></flash>
+  <new-tweet></new-tweet>
+  <direct-messages></direct-messages>
+  <tweeter-profile></tweeter-profile>
 
     <!-- PAGE COMPONENTS -->
     <div class="container page-components">
 
-      <new-tweet></new-tweet>
-      <direct-messages></direct-messages>
-      <tweeter-profile></tweeter-profile>
-
       <div class="fluid-container">
         <div class="row">
 
-          <!-- DASHBOARD -->
-          <div class="col-md-3 dashboard">
+          <div ng-view></div>
 
-            <dashboard-profile></dashboard-profile>
-            <wwtrends></wwtrends>
-
-          </div>
-          <!-- end of DASHBOARD -->
-
-          <tweet-stream></tweet-stream>
-
-          <!-- SUGGESTIONS AND COPYRIGHTS -->
-          <div class="col-md-3 right-board">
-
-            <!-- Find People you know -->
-            <div class="panel panel-default" ng-controller="WhoToFollowCtrl as suggestions">
-              <div class="panel-body">
-                <div><span><h4 class="text-muted">Who to follow<small> - <a href="#">Refresh</a> - <a href="#">View all</a></small></h4></span></div>
-
-                <suggestions></suggestions>
-
-                <!-- POPULAR ACCOUNTS -->
-                <div class="pop-acc">
-                  <div class="panel-divider"></div>
-                  <div>
-                  <small>
-                    <a href="#"><span class="glyphicon glyphicon-user icon-btn"></span>Find people you know</a>
-                      <span> - </span>
-                    <a href="#">Popular accounts</a>
-                  </small>
-                  </div>
-                </div>
-                <!-- POPULAR ACCOUNTS -->
-
-              </div>
-            </div>
-            <!-- end of Find People you know -->
-
-            <credits></credits>
-
-          </div>
-          <!-- end of SUGGESTIONS AND COPYRIGHTS -->
+          <suggestions-copyrights></suggestions-copyrights>
 
         </div>
       </div>
@@ -83,11 +44,12 @@
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Import AngularJS -->
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- Importing my JS files -->
     <script src="js/ajs-app.js"></script>
     <script src="js/app.js"></script>
