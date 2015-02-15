@@ -1,4 +1,3 @@
-
 var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 
 	.config(function($routeProvider, $locationProvider) {
@@ -158,7 +157,13 @@ app.directive('navigation', function() {
 app.directive('tweetStream', function () {
 	return {
 		restrict: 'E',
-		templateUrl: 'directives/tweet-stream.html'
+		scope: true,
+		templateUrl: 'directives/tweet-stream.html',
+		controller: function($scope, $rootScope) {
+			$scope.setProfile = function(tweet) {
+				$rootScope.currentProfile = tweet;
+			}
+		}
 	}
 });
 
@@ -202,7 +207,11 @@ app.directive('dashboardProfile', function () {
 app.directive('tweeterProfile', function () {
 	return {
 		restrict: 'E',
-		templateUrl: 'directives/tweeter-profile.html'
+		scope: true,
+		templateUrl: 'directives/tweeter-profile.html',
+		controller: function($scope, $rootScope) {
+			
+		}
 	}
 });
 
