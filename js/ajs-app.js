@@ -9,17 +9,23 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 			.when('/', {
 				templateUrl: 'pages/home.html',
 				controller: 'HomeCtrl',
-				controllerAs: 'HomeCtrl'
+				controllerAs: 'HomeCtrl',
+				title: 'Home'
 			})
 			.when('/notifications', {
 				templateUrl: 'pages/notifications.html',
-				// controller: 'NotificationsCtrl',
-				// controllerAs: 'NotificationsCtrl'
+				controller: 'NotificationsCtrl',
+				controllerAs: 'NotificationsCtrl',
+				title: 'Notifications'
 			})
 			.when('/discover', {
 				templateUrl: 'pages/discover.html',
-				// controller: 'DiscoverCtrl',
-				// controllerAs: 'DiscoverCtrl'
+				controller: 'DiscoverCtrl',
+				controllerAs: 'DiscoverCtrl',
+				title: 'Discover'
+			})
+			.otherwise({
+				redirectTo: '/'
 			});
 
 		$locationProvider.html5Mode(true);
@@ -28,15 +34,17 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 	.constant('angularMomentConfig', {
 	})
 
+	.run(['$location', '$rootScope', function($location, $rootScope) {
+	    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+	        $rootScope.title = current.$$route.title;
+	    });
+	}])
+
 	.controller('MainCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
 			$scope.$route = $route;
 			$scope.$location = $location;
 			$scope.$routeParams = $routeParams;
 
-			$rootScope.navigation = function(tab) {
-				$('ul.nav li').removeClass('active');
-				$('#' + tab + 'Tab').addClass('active');
-			}
 	});
 
 /* *************** PAGE CONTROLLERS *************** */
@@ -44,21 +52,27 @@ app.controller('HomeCtrl', function($scope, $rootScope, $route, $routeParams, $l
 	this.name = 'HomeCtrl';
 	this.$location = $location;
 
-	$rootScope.navigation('home');
+	$rootScope.homeTab = true;
+	$rootScope.notiTab = false;
+	$rootScope.discTab = false;
 });
 
-app.controller('NotificationsCtrl', function($scope, $route, $routeParams, $location) {
+app.controller('NotificationsCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
 	this.name = 'NotificationsCtrl';
 	this.$location = $location;
 
-	$rootScope.navigation('noti');
+	$rootScope.homeTab = false;
+	$rootScope.notiTab = true;
+	$rootScope.discTab = false;
 });
 
-app.controller('DiscoverCtrl', function($scope, $route, $routeParams, $location) {
+app.controller('DiscoverCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
 	this.name = 'DiscoverCtrl';
 	this.$location = $location;
 
-	$rootScope.navigation('discover');
+	$rootScope.homeTab = false;
+	$rootScope.notiTab = false;
+	$rootScope.discTab = true;
 });
 /* *************** 	***********	*************** */
 
@@ -134,9 +148,9 @@ app.directive('suggestionsCopyrights', function() {
 app.directive('navigation', function() {
 	return {
 		restrict: 'E',
+		scope: true,
 		templateUrl: 'directives/navigation.html',
-		controller: function() {
-
+		controller: function($scope, $rootScope) {
 		}
 	}
 });
