@@ -108,7 +108,7 @@ app.controller('WhoToFollowCtrl', function() {
 
 // Credit and Abouts Controller
 app.controller('AboutsCtrl', function() {
-	this.contents = ["&copy; 2014 Twitter", "About", "Help", "Terms", "Privacy", "Cookies", "Ads info", "Brand", "Blog", "Status", "Apps", "Jobs", "Advertise", "Businesses", "Media", "Developers"];
+	this.contents = ["\u00A9 2014 Twitter", "About", "Help", "Terms", "Privacy", "Cookies", "Ads info", "Brand", "Blog", "Status", "Apps", "Jobs", "Advertise", "Businesses", "Media", "Developers"];
 });
 
 // Tweets Stream Controller
