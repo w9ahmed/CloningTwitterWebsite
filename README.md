@@ -7,7 +7,7 @@ At first, this was static pages, but now I started adding more functionality to 
 
 ### The project now uses nodeJS, so make sure you have node installed. To install nodeJS: ###
 
-* sudo apt-get install node
+* sudo apt-get install nodejs
 * sudo apt-get install npm
 
 ### If you don't have Bower installed: ###
