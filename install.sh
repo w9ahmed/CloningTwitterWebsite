@@ -1,34 +1,34 @@
 #!/bin/bash
 
-clear
+echo 'CloningTwitterWebsite install script running...'
+echo '-----------------------------------------------'
 
-if which npm >/dev/null; then
-    echo "npm exists"
-else
-    sudo apt-get install npm
-fi
-
-
+echo 'Checking requirements... '
 if which nodejs >/dev/null; then
-    echo "nodejs exists"
+    echo "nodejs already exists..."
 else
     sudo apt-get install nodejs
 fi
 
+if which npm >/dev/null; then
+    echo "npm already exists..."
+else
+    sudo apt-get install npm
+fi
 
-echo 'Cloning Twitter Website script running...'
-echo
+if which bower >/dev/null; then
+    echo "bower already exists..."
+else
+    sudo npm install -g bower
+fi
 
 echo 'Running npm install'
 npm install
-echo
 
 echo 'Running bower install'
 bower install
-echo
 
 echo 'Running grunt'
 grunt
-echo
 
 node server.js
