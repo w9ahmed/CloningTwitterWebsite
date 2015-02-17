@@ -2,6 +2,20 @@
 
 clear
 
+if which npm >/dev/null; then
+    echo "npm exists"
+else
+    sudo apt-get install npm
+fi
+
+
+if which nodejs >/dev/null; then
+    echo "nodejs exists"
+else
+    sudo apt-get install nodejs
+fi
+
+
 echo 'Cloning Twitter Website script running...'
 echo
 
