@@ -1,11 +1,16 @@
 # Cloning Twitter Website #
 
 This is a Twitter clone website, a little project I built to  learn front-end development.
-At first, this was static pages, but now I started adding more functionality to it.
+At first, it was static pages, but now it became interactive.
 
 ## Getting Started ##
 
 ### The project now uses nodeJS, so make sure you have node installed. To install nodeJS: ###
+
+You can install the requirements automatically running:
+* ./install.sh 
+
+Basically, the script will do all the following steps and commands for you, but if you prefer to add them manually:
 
 * sudo apt-get install nodejs
 * sudo apt-get install npm
