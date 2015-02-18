@@ -1,8 +1,8 @@
-app.directive('navigation', function() {
+app.directive('navigation', function($templateCache) {
 	return {
 		restrict: 'E',
 		scope: true,
-		templateUrl: 'app/navigation/navigation.html',
+		template: $templateCache.get("app/navigation/navigation"),
 		controller: function($scope, $rootScope) {
 		}
 	}

@@ -1,6 +1,6 @@
-app.directive('credits', function() {
+app.directive('credits', function($templateCache) {
 	return {
 		restrict: 'E',
-		templateUrl: 'app/credits/credits.html'
+		template: $templateCache.get('app/credits/credits')
 	}
 });

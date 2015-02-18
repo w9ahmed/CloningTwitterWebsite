@@ -1,8 +1,8 @@
-app.directive('tweeterProfile', function () {
+app.directive('tweeterProfile', function ($templateCache) {
 	return {
 		restrict: 'E',
 		scope: true,
-		templateUrl: 'app/tweeter-profile/tweeter-profile.html',
+		template: $templateCache.get('app/tweeter-profile/tweeter-profile'),
 		controller: function($scope, $rootScope) {
 			
 		}

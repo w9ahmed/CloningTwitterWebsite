@@ -3,6 +3,23 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    ngtemplates: {
+      options: {
+        htmlmin: {
+          collapseWhitespace: true,
+          removeComments: true,
+          collapseBooleanAttributes: true
+        },
+        bootstrap: function(module, script) {
+          return module + ".run(['$templateCache', function($templateCache) {\n "+ script + " }]);";
+        },
+        url: function(url) { return url.replace('.html', ''); }
+      },
+      app: {
+        src: 'app/**/*.html',
+        dest: 'js/templates.js'
+      }
+    },
     uglify: {
       options: {
         mangle: false
@@ -33,6 +50,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'cssmin']);
-
+  grunt.registerTask('default', ['ngtemplates', 'uglify', 'cssmin']);
 };

@@ -1,6 +1,6 @@
-app.directive('wwtrends', function() {
+app.directive('wwtrends', function($templateCache) {
 	return {
 		restrict: 'E',
-		templateUrl: 'app/wwtrends/wwtrends.html'
+		template: $templateCache.get('app/wwtrends/wwtrends')
 	}
 });

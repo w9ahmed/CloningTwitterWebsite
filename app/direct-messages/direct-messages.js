@@ -1,6 +1,6 @@
-app.directive('directMessages', function () {
+app.directive('directMessages', function ($templateCache) {
 	return {
 		restrict: 'E',
-		templateUrl: 'app/direct-messages/direct-messages.html'
+		template: $templateCache.get('app/direct-messages/direct-messages')
 	}
 });

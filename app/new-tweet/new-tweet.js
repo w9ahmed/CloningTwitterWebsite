@@ -1,8 +1,8 @@
-app.directive('newTweet', function () {
+app.directive('newTweet', function ($templateCache) {
 	return {
 		restrict: 'E',
 		scope: true,
-		templateUrl: 'app/new-tweet/new-tweet.html',
+		template: $templateCache.get('app/new-tweet/new-tweet'),
 		controller: function($scope, $rootScope) {
 
 			$scope.sendTweet = function(tweet) {

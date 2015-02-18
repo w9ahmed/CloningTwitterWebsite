@@ -1,8 +1,8 @@
-app.directive('tweetStream', function () {
+app.directive('tweetStream', function ($templateCache) {
 	return {
 		restrict: 'E',
 		scope: true,
-		templateUrl: 'app/tweet-stream/tweet-stream.html',
+		template: $templateCache.get('app/tweet-stream/tweet-stream'),
 		controller: function($scope, $rootScope) {
 			$scope.setProfile = function(tweet) {
 				$rootScope.currentProfile = tweet;
