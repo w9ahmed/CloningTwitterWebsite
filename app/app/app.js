@@ -144,16 +144,6 @@ app.directive('suggestionsCopyrights', function() {
 /* *************** 	***********	*************** */
 
 /* ***************	DIRECTIVES	*************** */
-app.directive('navigation', function() {
-	return {
-		restrict: 'E',
-		scope: true,
-		templateUrl: 'directives/navigation.html',
-		controller: function($scope, $rootScope) {
-		}
-	}
-});
-
 app.directive('tweetStream', function () {
 	return {
 		restrict: 'E',
@@ -213,42 +203,5 @@ app.directive('tweeterProfile', function () {
 			
 		}
 	}
-});
-
-app.directive('suggestions', function() {
-	return {
-		restrict: 'E',
-		templateUrl: 'directives/suggestions.html'
-	}
-});
-
-app.directive('credits', function() {
-	return {
-		restrict: 'E',
-		templateUrl: 'directives/credits.html'
-	}
-});
-
-app.directive('wwtrends', function() {
-	return {
-		restrict: 'E',
-		templateUrl: 'directives/wwtrends.html'
-	}
-});
-
-app.directive('flash', function () {
-	return {
-		restrict: 'E',
-		scope: true,
-		template: '<div ng-click="show" class="panel flash-notification">Your Tweet was posted!</div>',
-		controller: function($scope, $rootScope) {
-
-			$scope.show = function () {
-				$('.flash-notification').fadeOut();
-				$('.navbar').removeClass('shadow-down');
-			}
-
-		}
-	};
 });
 /* *************** 	**********	*************** */

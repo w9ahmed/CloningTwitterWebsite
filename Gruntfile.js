@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         mangle: false
       },
       build: {
-        src: 'js/ajs-app.js',
+        src: 'app/**/*.js',
         dest: 'js/min/ajs-app.min.js'
       }
     },
@@ -28,6 +28,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
