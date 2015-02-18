@@ -1,6 +1,6 @@
 app.directive('credits', function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'directives/credits.html'
+		templateUrl: 'app/credits/credits.html'
 	}
 });

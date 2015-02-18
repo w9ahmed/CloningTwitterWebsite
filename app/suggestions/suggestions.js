@@ -1,6 +1,6 @@
 app.directive('suggestions', function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'directives/suggestions.html'
+		templateUrl: 'app/suggestions/suggestions.html'
 	}
 });
