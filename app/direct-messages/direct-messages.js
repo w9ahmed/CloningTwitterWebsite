@@ -1,6 +1,6 @@
 app.directive('directMessages', function () {
 	return {
 		restrict: 'E',
-		templateUrl: 'directives/direct-messages.html'
+		templateUrl: 'app/direct-messages/direct-messages.html'
 	}
 });
