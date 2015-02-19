@@ -10,24 +10,7 @@
 
           <!-- TWEET BOX -->
           <li class="stream-tweet" ng-repeat="tweet in tweets | orderBy: 'time':true">
-            <div class="tweet-container">
-              <div class="tweeter-photo"></div>
-              <div class="tweet-content">
-                <div class="tweeter-name">
-                  <a ng-click="setProfile(tweet);" class="tweeter-sender-details" href="#" data-toggle="modal" data-target="#showTweeterProfile"><strong>{{tweet.user}}</strong><small class="text-muted">{{tweet.username}}</small></a>
-                  <small>- <a href="#"><span am-time-ago="tweet.time"></span></a></small>
-                </div>
-                <div class="tweet-text">{{tweet.tweet}}</div>
-                <div class="tweet-action">
-                  <ul class="list-unstyled list-inline">
-                    <li id="reply"><a href="#"><div><span class="glyphicon glyphicon-new-window"></span></div></a></li>
-                    <li id="retweet"><a href="#"><div><span class="glyphicon glyphicon-retweet"></span><span class="bdg-mrg">{{tweet.retweets}}</span></div></li>
-                    <li id="favorite"><a href="#"><div><span class="glyphicon glyphicon-asterisk"></span><span class="bdg-mrg">{{tweet.favorites}}</span></div></a></li>
-                    <li id="options"><a href="#"><div><span class="glyphicon glyphicon-minus"></span></span></div></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <tweet-box tweet="tweet"></tweet-box>
           </li>
           <!-- end of TWEET BOX -->
         </ul>

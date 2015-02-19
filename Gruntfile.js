@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         url: function(url) { return url.replace('.html', ''); }
       },
       app: {
-        src: 'app/**/*.html',
+        src: ['app/**/*.html', 'components/**/*.html'],
         dest: 'js/templates/templates.js'
       }
     },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         mangle: false
       },
       build: {
-        src: ['app/**/*.js', 'pages/**/*.js'],
+        src: ['app/**/*.js', 'pages/**/*.js', 'components/**/*.js'],
         dest: 'js/min/ajs-app.min.js'
       },
       templates: {
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
     },
     watch: {
       app: {
-        files: ['app/**/*.*', 'pages/**/*.js'],
+        files: ['app/**/*.*', 'pages/**/*.js', 'components/**/*.*'],
         tasks: ['ngtemplates', 'uglify']
       },
       scss: {

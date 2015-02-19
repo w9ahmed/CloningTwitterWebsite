@@ -45,14 +45,3 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 			$scope.$routeParams = $routeParams;
 
 	});
-
-/* ***************	 SECTIONS	*************** */
-
-app.directive('suggestionsCopyrights', function() {
-	return {
-		restrict: 'E',
-		templateUrl: 'sections/suggestions-copyrights.html'
-	}
-});
-
-/* *************** 	***********	*************** */
