@@ -55,9 +55,14 @@ module.exports = function(grunt) {
     	}
     },
     watch: {
-    	files: ['app/**/*', 'pages/**/*.js',
-        'js/templates/templates.js', 'css/styles.scss','css/styles.css'],
-    	tasks: ['ngtemplates', 'uglify', 'sass', 'cssmin']
+      app: {
+        files: ['app/**/*.*', 'pages/**/*.js'],
+        tasks: ['ngtemplates', 'uglify']
+      },
+      scss: {
+        files: ['css/styles.scss'],
+        tasks: ['sass', 'cssmin']
+      }
     }
   });
 
