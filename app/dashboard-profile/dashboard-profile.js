@@ -1,6 +1,6 @@
-app.directive('dashboardProfile', function () {
+app.directive('dashboardProfile', function ($templateCache) {
 	return {
 		restrict: 'E',
-		templateUrl: 'app/dashboard-profile/dashboard-profile.html'
+		template: $templateCache.get('app/dashboard-profile/dashboard-profile')
 	}
 });
