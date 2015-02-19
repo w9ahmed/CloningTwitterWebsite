@@ -33,6 +33,18 @@ module.exports = function(grunt) {
         dest: 'js/min/templates.min.js'
       }
     },
+    sass: {
+      options: {
+        style: 'expanded'
+      },
+      build: {
+        expand: true,
+        cwd: 'css',
+        src: ['*.scss'],
+        dest: 'css/',
+        ext: '.css'
+      }
+    },
     cssmin: {
     	build: {
     		src: 'css/styles.css',
@@ -40,8 +52,9 @@ module.exports = function(grunt) {
     	}
     },
     watch: {
-    	files: ['css/styles.css', 'js/ajs-app.js'],
-    	tasks: ['uglify', 'cssmin']
+    	files: ['app/**/*.html', 'app/**/*.js',
+        'js/templates/templates.js', 'css/styles.scss','css/styles.css'],
+    	tasks: ['ngtemplates', 'uglify', 'sass', 'cssmin']
     }
   });
 
@@ -54,5 +67,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['ngtemplates', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['ngtemplates', 'uglify', 'sass', 'cssmin']);
+  grunt.registerTask('dev', ['ngtemplates', 'uglify', 'sass', 'cssmin', 'watch']);
 };

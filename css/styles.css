@@ -5,81 +5,100 @@ body {
   background: url("../img/TwitterBackNew.jpg") no-repeat;
   background-size: 100%;
   background-position: 0px 50px;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+}
 
 /*.nav {
 	height: 50px;
 }*/
 .search-form {
-  margin-right: 15px; }
+  margin-right: 15px;
+}
 
 .icon-btn {
-  margin-right: 7px; }
+  margin-right: 7px;
+}
 
 .mid-icon {
-  margin-left: 115px; }
+  margin-left: 115px;
+}
 
 .marg-top {
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
 .marg-left {
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 
 .nav li div {
   width: inherit;
   height: 5px;
   background: #f8f8f8;
   margin-bottom: -1px;
-  /*margin-top: -4px;*/ }
+  /*margin-top: -4px;*/
+}
 
 .nav li:hover div, .nav li.active div {
-  background: #383838; }
+  background: #383838;
+}
 
 .navbar-img {
   width: 20px;
-  height: 20px; }
+  height: 20px;
+}
 
 .new-tweet-input {
   margin-bottom: -20px;
-  resize: none; }
+  resize: none;
+}
 
 .text-count {
   margin-right: 10px;
   margin-top: 7px;
-  font-size: 15px; }
+  font-size: 15px;
+}
 
 .navbar-profile {
   margin-right: 15px;
   /*margin-left: 10px;*/
   margin-top: 5px;
   border: 1px solid #cccccc;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .navbar-profile img {
   width: 35px;
-  height: 35px; }
+  height: 35px;
+}
 
 .profile-drop {
-  margin-top: 14px; }
+  margin-top: 14px;
+}
 
 .profile-drop-view h5 {
   margin-bottom: -2px;
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 .dashboard {
-  margin-right: -20px; }
+  margin-right: -20px;
+}
 
 .right-board {
-  margin-left: -20px; }
+  margin-left: -20px;
+}
 
 .inside-tweet {
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: -15px;
-  padding: 10px; }
+  padding: 10px;
+}
 
 .inside-tweet-new-compose {
-  resize: none; }
+  resize: none;
+}
 
 .photo-left-dashboard {
   width: 65px;
@@ -87,75 +106,93 @@ body {
   border: 1px solid #cccccc;
   border-radius: 5px;
   margin-left: -3px;
-  margin-top: -10px; }
+  margin-top: -10px;
+}
 
 .bold-text {
   font-weight: bold;
-  color: black; }
-  .bold-text:hover {
-    color: black; }
+  color: black;
+}
+.bold-text:hover {
+  color: black;
+}
 
 .dash-feature-container {
-  margin: -16px -16px -15px -16px; }
+  margin: -16px -16px -15px -16px;
+}
 
 .feature {
   width: 264px;
-  height: 100px; }
+  height: 100px;
+}
 
 .force-right {
   position: fixed;
   float: right;
   margin-left: 10px;
   margin-top: 10px;
-  color: black; }
-  .force-right:hover {
-    color: black; }
+  color: black;
+}
+.force-right:hover {
+  color: black;
+}
 
 .force-right-down {
   position: fixed;
   float: right;
   margin-left: 10px;
-  margin-top: 35px; }
+  margin-top: 35px;
+}
 
 .photo-suggestion {
   width: 55px;
   height: 55px;
   border: 1px solid #cccccc;
   border-radius: 5px;
-  margin-left: -3px; }
+  margin-left: -3px;
+}
 
 div.float-left {
-  float: left; }
+  float: left;
+}
 
 div.float-right {
-  float: right; }
+  float: right;
+}
 
 .left-marg {
-  padding: 10px; }
+  padding: 10px;
+}
 
 .container-padding {
   margin-bottom: 10px;
-  /*background-color: tomato;*/ }
+  /*background-color: tomato;*/
+}
 
 .photo-messages {
   width: 60px;
   height: 60px;
   border: 1px solid #cccccc;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 div.message-box {
   width: inherit;
-  padding: 5px; }
+  padding: 5px;
+}
 
 .dashboard-nav a {
-  color: #383838; }
+  color: #383838;
+}
 
 .dashboard-nav a:hover {
   text-decoration: none;
-  color: steelblue; }
+  color: steelblue;
+}
 
 .dashboard-nav-active {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 .stream-bar {
   text-align: center;
@@ -167,47 +204,57 @@ div.message-box {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: #eee;
-  display: none; }
+  display: none;
+}
 
 .stream-bar:hover {
   cursor: pointer;
-  background-color: #ddd; }
+  background-color: #ddd;
+}
 
 .stream-tweet, .direct-msg-container {
   padding: 10px;
   margin-left: -15px;
   margin-right: -15px;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+}
 
 .direct-msgs li:last-child .direct-msg-container {
-  border: none; }
+  border: none;
+}
 
 #reply a, #retweet a, #favorite a, #options a {
-  color: #ccc; }
+  color: #ccc;
+}
 
 #reply a:hover, #options a:hover {
   color: steelblue;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 #retweet a:hover, #retweet .retweeted {
   color: green;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 #favorite a:hover, #favorite .favorited {
   color: orange;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .block {
   display: inline-block;
   vertical-align: top;
-  height: auto; }
+  height: auto;
+}
 
 .tweeter-photo, .suggestion-photo, .direct-msg-photo {
   background-color: steelblue;
   width: 55px;
   height: 55px;
   border-radius: 5px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .tweet-content, .direct-msg-content {
   /*background-color: tomato;*/
@@ -215,122 +262,150 @@ div.message-box {
   vertical-align: top;
   width: 88%;
   height: auto;
-  padding-left: 5px; }
+  padding-left: 5px;
+}
 
 .tweet-action {
-  padding-top: 5px; }
+  padding-top: 5px;
+}
 
 .tweet-action li {
-  margin-right: 10px; }
+  margin-right: 10px;
+}
 
 .suggestion-details {
   display: inline-block;
   vertical-align: top;
   width: 74%;
-  height: auto; }
+  height: auto;
+}
 
 .suggestion-container {
-  margin-bottom: 7px; }
+  margin-bottom: 7px;
+}
 
 .pop-acc {
-  padding-top: 7px; }
+  padding-top: 7px;
+}
 
 .panel-divider {
   height: 1px;
   background-color: #ddd;
   margin-left: -16px;
-  margin-right: -16px; }
+  margin-right: -16px;
+}
 
 .followed-by {
-  display: none; }
+  display: none;
+}
 
 .dash-feature-img img {
   width: 100%;
   height: 100%;
   border-top-left-radius: 3px;
-  border-top-right-radius: 3px; }
+  border-top-right-radius: 3px;
+}
 
 .dash-profile-photo {
   background-color: steelblue;
   width: 60px;
   height: 60px;
   border-radius: 5px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .dash-profile-name {
   margin-left: 2px;
   width: 71%;
   display: inline-block;
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .dash-profile-name h5 {
   color: black;
   font-weight: bold;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .bdg-mrg {
   margin-left: 7px;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .no-display {
-  display: none; }
+  display: none;
+}
 
 .msg-sender-details, .sugg-details, .tweeter-sender-details {
-  color: black; }
+  color: black;
+}
 
 .msg-sender-details:hover, .sugg-details:hover, .tweeter-sender-details:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .msg-sender-details > small, .sugg-details > small, .tweeter-sender-details > small {
-  margin-left: 2px; }
+  margin-left: 2px;
+}
 
 .msg-sender-details:hover > strong, .sugg-details:hover > strong, .tweeter-sender-details:hover > strong {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 .collapsed-tweet {
-  margin-top: 50px; }
+  margin-top: 50px;
+}
 
 .dash-profile-details span:last-child {
   font-size: 17px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .dash-profile-details:hover, .dash-profile-details:hover > span {
   color: steelblue;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .the-panel-title {
   margin-left: -16px;
   margin-right: -16px;
   padding: 0 15px 15px 15px;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+}
 
 .the-panel-title h4 {
-  margin: 0; }
+  margin: 0;
+}
 
 .feature-modal-photo {
   background-color: tomato;
   margin-left: -15px;
   margin-top: -15px;
   width: 105.2%;
-  height: 125px; }
+  height: 125px;
+}
 
 .profile-modal-details-container {
-  margin-top: -35px; }
+  margin-top: -35px;
+}
 
 .profile-photo-modal {
   background-color: steelblue;
   width: 75px;
   height: 75px;
   border-radius: 5px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .profile-details-modal {
   margin-left: 2px;
   display: inline-block;
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .profile-summary-btn {
-  display: inline-block; }
+  display: inline-block;
+}
 
 .flash-notification {
   top: 55px;
@@ -345,7 +420,9 @@ div.message-box {
   border-top-right-radius: 0;
   width: 500px;
   height: 55px;
-  box-shadow: 0 1px 5px #888; }
+  box-shadow: 0 1px 5px #888;
+}
 
 .shadow-down {
-  box-shadow: 0 1px 5px #888; }
+  box-shadow: 0 1px 5px #888;
+}
