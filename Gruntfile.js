@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       },
       app: {
         src: 'app/**/*.html',
-        dest: 'js/templates.js'
+        dest: 'js/templates/templates.js'
       }
     },
     uglify: {
@@ -27,6 +27,10 @@ module.exports = function(grunt) {
       build: {
         src: 'app/**/*.js',
         dest: 'js/min/ajs-app.min.js'
+      },
+      templates: {
+        src: 'js/templates/templates.js',
+        dest: 'js/min/templates.min.js'
       }
     },
     cssmin: {
