@@ -14,6 +14,15 @@ app.directive('suggestions', function($templateCache) {
 					username: '@stan'
 				}
 			];
+
+			$scope.close = function(suggestion) {
+				suggestion.dismiss = true;
+			}
+
+			$scope.toggle = function(suggestion) {
+				suggestion.followed = !suggestion.followed;
+			};
+
 		}
 	};
 });

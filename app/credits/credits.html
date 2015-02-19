@@ -2,7 +2,10 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <ul class="list-unstyled list-inline">
-      <li ng-repeat="content in contents track by $index" class="text-muted">{{content}}</li>
+      <li ng-repeat="content in contents track by $index" class="text-muted">
+      	<span ng-if="$index === 0">{{content}}</span>
+      	<a ng-if="$index !== 0" href="">{{content}}</a>
+  	  </li>
     </ul>
   </div>
 </div>
