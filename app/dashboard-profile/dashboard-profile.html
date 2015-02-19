@@ -1,4 +1,4 @@
-<div class="panel panel-default" ng-controller="DashboardCtrl as dashboard">
+<div class="panel panel-default">
   <div class="panel-body">
     <!-- Feature Photo -->
     <div class="dash-feature-container">
@@ -11,8 +11,8 @@
       <div class="dash-profile-container">
         <a href="#"><div class="dash-profile-photo"></div></a>
         <div class="dash-profile-name">
-          <a href="#"><h5>{{dashboard.content.name}}</h5></a>
-          <a href="#"><small class="text-muted">{{dashboard.content.username}}</small></a>
+          <a href="#"><h5>{{content.name}}</h5></a>
+          <a href="#"><small class="text-muted">{{content.username}}</small></a>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
     <!-- Tweets - Following - Followers -->
     <div>
       <ul class="list-unstyled list-inline">
-        <li class="text-center" ng-repeat="item in dashboard.content.info"><a class="dash-profile-details"  href="#"><span class="text-muted"><small>{{item.name | uppercase}}</small></span><br><span>{{item.value}}</span></a></li>
+        <li class="text-center" ng-repeat="item in content.info"><a class="dash-profile-details"  href="#"><span class="text-muted"><small>{{item.name | uppercase}}</small></span><br><span>{{item.value}}</span></a></li>
       </ul>
     </div>
      <!-- end of Tweets - Following - Followers -->

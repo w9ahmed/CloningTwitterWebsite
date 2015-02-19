@@ -1,6 +1,12 @@
 app.directive('wwtrends', function($templateCache) {
 	return {
 		restrict: 'E',
-		template: $templateCache.get('app/wwtrends/wwtrends')
-	}
+		scope: true,
+		template: $templateCache.get('app/wwtrends/wwtrends'),
+		controller: function($scope) {
+			$scope.trends = ['#AskSuperwomanLIVE', '#OlimpiadasDoRangelPt1',
+				'#TodoBienHastaQue', '#5HNoPontoPop', '#yourefired', "John O'Shea",
+				'Richard Flanagan', 'Lorik Cana', 'Chiles', 'Lord Sugar'];
+		}
+	};
 });

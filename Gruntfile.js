@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         mangle: false
       },
       build: {
-        src: 'app/**/*.js',
+        src: ['app/**/*.js', 'pages/**/*.js'],
         dest: 'js/min/ajs-app.min.js'
       },
       templates: {
@@ -46,13 +46,16 @@ module.exports = function(grunt) {
       }
     },
     cssmin: {
+      options: {
+        root: './'
+      },
     	build: {
     		src: 'css/styles.css',
     		dest: 'css/min/styles.min.css'
     	}
     },
     watch: {
-    	files: ['app/**/*.html', 'app/**/*.js',
+    	files: ['app/**/*', 'pages/**/*.js',
         'js/templates/templates.js', 'css/styles.scss','css/styles.css'],
     	tasks: ['ngtemplates', 'uglify', 'sass', 'cssmin']
     }

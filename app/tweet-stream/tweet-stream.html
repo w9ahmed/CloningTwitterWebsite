@@ -5,11 +5,11 @@
       <div class="the-panel-title"><h4 class="text-muted">Tweets</h4></div>
       
       
-      <div class="stream-view" ng-controller="StreamCtrl as stream">
+      <div class="stream-view">
         <ul class="list-unstyled">
 
           <!-- TWEET BOX -->
-          <li class="stream-tweet" ng-repeat="tweet in stream.tweets | orderBy: 'time':true">
+          <li class="stream-tweet" ng-repeat="tweet in tweets | orderBy: 'time':true">
             <div class="tweet-container">
               <div class="tweeter-photo"></div>
               <div class="tweet-content">

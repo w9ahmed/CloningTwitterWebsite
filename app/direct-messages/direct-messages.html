@@ -1,5 +1,5 @@
 <!-- DIRECT MESSAGES MODAL -->
-<div class="modal fade" id="directMessages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="DMCtrl as directmessages">
+<div class="modal fade" id="directMessages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -13,7 +13,7 @@
           <ul class="list-unstyled direct-msgs">
 
             <!-- MESSAGE VIEW -->
-            <li ng-repeat="message in directmessages.messages">
+            <li ng-repeat="message in messages">
               <div class="direct-msg-container">
                 <div class="direct-msg-photo"></div>
                 <div class="direct-msg-content">
