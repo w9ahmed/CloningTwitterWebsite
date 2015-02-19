@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     ngtemplates: {
       options: {
         htmlmin: {
-          collapseWhitespace: true,
+          // collapseWhitespace: true,
           removeComments: true,
           collapseBooleanAttributes: true
         },
