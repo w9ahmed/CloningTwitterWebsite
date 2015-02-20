@@ -1,4 +1,4 @@
-# Cloning Twitter Website #
+e# Cloning Twitter Website #
 
 This is a Twitter clone website, a little project I built to  learn front-end development.
 At first, it was static pages, but now it became interactive.
@@ -16,7 +16,13 @@ Basically, the script will do all the following steps and commands for you, but 
 * sudo apt-get install npm
 
 ### If you don't have Bower installed: ###
-* npm install -g bower
+* sudo npm install -g bower
+
+### If you don't have Grunt installed: ###
+* sudo npm install -g grunt-cli
+
+### Also, the project uses Sass, so you need to have Ruby installed to use Sass ###
+* sudo gem install sass
 
 ### After installing all of these, go to the project directory and run: ###
 * npm install
