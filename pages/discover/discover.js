@@ -5,4 +5,7 @@ app.controller('DiscoverCtrl', function($scope, $rootScope, $route, $routeParams
 	$rootScope.homeTab = false;
 	$rootScope.notiTab = false;
 	$rootScope.discTab = true;
+
+	$scope.list = ["Tweets", "Activity", "Who to follow", 
+		"Find friends", "Popular accounts"];
 });

@@ -22,6 +22,7 @@ Basically, the script will do all the following steps and commands for you, but 
 * sudo npm install -g grunt-cli
 
 ### Also, the project uses Sass, so you need to have Ruby installed to use Sass ###
+* sudo apt-get install ruby-full
 * sudo gem install sass
 
 ### After installing all of these, go to the project directory and run: ###

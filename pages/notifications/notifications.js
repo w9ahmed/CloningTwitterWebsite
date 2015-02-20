@@ -5,4 +5,6 @@ app.controller('NotificationsCtrl', function($scope, $rootScope, $route, $routeP
 	$rootScope.homeTab = false;
 	$rootScope.notiTab = true;
 	$rootScope.discTab = false;
+
+	$scope.list = ["Notifications", "Mentions"];
 });
