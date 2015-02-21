@@ -13,8 +13,8 @@ app.directive('newTweet', function ($templateCache) {
 				tweet.favorites = 0;
 				tweet.self = true;
 
+				$rootScope.bartext = 1;
 				$rootScope.tweets.push(tweet);
-				Twitter.showNewTweets(1);
 			}
 
 		}
