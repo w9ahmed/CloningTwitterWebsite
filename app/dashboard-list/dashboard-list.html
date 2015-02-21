@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <ul class="list-group list-unstyled">
-    <li ng-repeat="item in list track by $index" class="list-group-item dashboard-nav dashboard-nav-active">
+    <li ng-repeat="item in list track by $index" ng-class="{'dashboard-nav-active': $index === 0}" class="list-group-item dashboard-nav">
     	<a href="#">
     		<div>{{item}}
     		<span class="glyphicon glyphicon-chevron-right pull-right"></span>

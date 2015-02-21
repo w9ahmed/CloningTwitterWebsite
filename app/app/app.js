@@ -43,5 +43,37 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 			$scope.$route = $route;
 			$scope.$location = $location;
 			$scope.$routeParams = $routeParams;
+	})
 
+	.service('Navigation', function($rootScope) {
+
+		this.setActiveTab = function(tab) {
+			$rootScope.homeTab = false;
+			$rootScope.notiTab = false;
+			$rootScope.discTab = false;
+
+			switch(tab) {
+			    case 'home':
+			        $rootScope.homeTab = true;
+			        break;
+			    case 'notifications':
+			        $rootScope.notiTab = true;
+			        break;
+		        case 'discover':
+		        	$rootScope.discTab = true;
+		        	break;
+			}
+		};
+
+		this.home = function() {
+			$rootScope.homeTab = true;
+		};
+
+		this.notifications = function() {
+			$rootScope.notiTab = true;
+		};
+
+		this.discover = function() {
+			$rootScope.discTab = true;
+		};
 	});

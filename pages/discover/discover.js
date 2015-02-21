@@ -1,10 +1,8 @@
-app.controller('DiscoverCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
+app.controller('DiscoverCtrl', function($scope, $rootScope, $route, $routeParams, $location, Navigation) {
 	this.name = 'DiscoverCtrl';
 	this.$location = $location;
 
-	$rootScope.homeTab = false;
-	$rootScope.notiTab = false;
-	$rootScope.discTab = true;
+	Navigation.discover();
 
 	$scope.list = ["Tweets", "Activity", "Who to follow", 
 		"Find friends", "Popular accounts"];

@@ -1,10 +1,7 @@
-app.controller('NotificationsCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
+app.controller('NotificationsCtrl', function($scope, $rootScope, $route, $routeParams, $location, Navigation) {
 	this.name = 'NotificationsCtrl';
 	this.$location = $location;
-
-	$rootScope.homeTab = false;
-	$rootScope.notiTab = true;
-	$rootScope.discTab = false;
+	Navigation.notifications();
 
 	$scope.list = ["Notifications", "Mentions"];
 });

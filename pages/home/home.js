@@ -1,8 +1,5 @@
-app.controller('HomeCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
+app.controller('HomeCtrl', function($scope, $rootScope, $route, $routeParams, $location, Navigation) {
 	this.name = 'HomeCtrl';
 	this.$location = $location;
-
-	$rootScope.homeTab = true;
-	$rootScope.notiTab = false;
-	$rootScope.discTab = false;
+	Navigation.home();
 });
