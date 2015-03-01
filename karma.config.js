@@ -16,7 +16,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'js/min/ajs-app.min.js',
-      'js/min/templates.min.js'
+      'js/min/templates.min.js',
+      'tests/*.js'
     ],
 
 
