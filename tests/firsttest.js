@@ -11,7 +11,7 @@ describe('First Test', function () {
 		expect(counter).toEqual(1);
 	});
 
-	if("decrement value", function() {
+	it("decrement value", function() {
 		counter--;
 		expect(counter).toEqual(0);
 	});
