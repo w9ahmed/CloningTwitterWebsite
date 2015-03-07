@@ -76,4 +76,13 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 		this.discover = function() {
 			$rootScope.discTab = true;
 		};
-	});
+	})
+
+	.controller('TestCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
+
+		$scope.counter = 0;
+
+		$scope.incrementCounter = function() {
+			$scope.counter++;
+		};
+	})

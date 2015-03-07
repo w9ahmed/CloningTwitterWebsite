@@ -1,4 +1,4 @@
-e# Cloning Twitter Website #
+# Cloning Twitter Website #
 
 This is a Twitter clone website, a little project I built to  learn front-end development.
 At first, it was static pages, but now it became interactive.

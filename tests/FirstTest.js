@@ -13,6 +13,6 @@ describe('First Test', function () {
 
 	it("decrement value", function() {
 		counter--;
-		expect(counter).toEqual(0);
+		expect(counter).toEqual(-1);
 	});
 });
