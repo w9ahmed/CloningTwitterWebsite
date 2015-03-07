@@ -79,7 +79,7 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 	})
 
 	// Should be removed after learning
-	.controller('TestCtrl', function($scope, $rootScope, $http, $interval, $timeout) {
+	.controller('TestCtrl', function($scope, $rootScope, $http, $interval, $timeout, $log) {
 
 		$scope.intervalCounter = 0;
 		$scope.timerCounter = 0;
@@ -95,6 +95,7 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 		$http.get("/json/messages.json")
 			.success(function (data) {
 				$scope.messages = data;
+				$log.log("There are " + data.length + " items.");
 			});
 
 		$scope.counter = 0;

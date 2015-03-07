@@ -2,7 +2,7 @@
 describe("Controller Test", function () {
 	// Arrange
 	var mockScope = {};
-	var controller, backend, mockInterval, mockTimeout;
+	var controller, backend, mockInterval, mockTimeout, mockLog;
 
 	// You can also, angular.mock.module
 	beforeEach(module("twitter"));
@@ -32,15 +32,17 @@ describe("Controller Test", function () {
 			]);
 	}));
 
-	beforeEach(angular.mock.inject(function ($controller, $rootScope, $http, $interval, $timeout) {
+	beforeEach(angular.mock.inject(function ($controller, $rootScope, $http, $interval, $timeout, $log) {
 		mockScope = $rootScope.$new();
 		mockInterval = $interval;
 		mockTimeout = $timeout;
+		mockLog = $log;
 		controller = $controller("TestCtrl", {
 			$scope: mockScope,
 			$http: $http,
 			$interval: mockInterval,
-			$timeout: mockTimeout
+			$timeout: mockTimeout,
+			$log: mockLog
 		});
 
 		backend.flush();
@@ -81,6 +83,10 @@ describe("Controller Test", function () {
 	it("Increments timer counter", function () {
 		mockTimeout.flush(5000);
 		expect(mockScope.timerCounter).toEqual(1);
+	});
+
+	it("Writes log messages", function () {
+		expect(mockLog.log.logs.length).toEqual(1);
 	});
 
 });
