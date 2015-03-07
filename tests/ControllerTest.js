@@ -2,7 +2,7 @@
 describe("Controller Test", function () {
 	// Arrange
 	var mockScope = {};
-	var controller, backend;
+	var controller, backend, mockInterval, mockTimeout;
 
 	// You can also, angular.mock.module
 	beforeEach(module("twitter"));
@@ -32,31 +32,35 @@ describe("Controller Test", function () {
 			]);
 	}));
 
-	beforeEach(angular.mock.inject(function ($controller, $rootScope, $http) {
+	beforeEach(angular.mock.inject(function ($controller, $rootScope, $http, $interval, $timeout) {
 		mockScope = $rootScope.$new();
+		mockInterval = $interval;
+		mockTimeout = $timeout;
 		controller = $controller("TestCtrl", {
 			$scope: mockScope,
-			$http: $http
+			$http: $http,
+			$interval: mockInterval,
+			$timeout: mockTimeout
 		});
 
 		backend.flush();
 	}));
 
 	// Act and Assess
-	it("Create variable", function() {
+	it("Create variable", function () {
 		expect(mockScope.counter).toEqual(0);
 	});
 
-	it("Increments counter", function() {
+	it("Increments counter", function () {
 		mockScope.incrementCounter();
 		expect(mockScope.counter).toEqual(1);
 	});
 
-	it("Makes an Ajax request", function() {
+	it("Makes an Ajax request", function () {
 		backend.verifyNoOutstandingExpectation();
 	});
 
-	it("Processes the data", function() {
+	it("Processes the data", function () {
 		expect(mockScope.messages).toBeDefined();
 		expect(mockScope.messages.length).toEqual(3);
 	});
@@ -65,6 +69,18 @@ describe("Controller Test", function () {
 		expect(mockScope.messages[0].user).toEqual("Ahmed Ezzat");
 		expect(mockScope.messages[1].user).toEqual("Jack McCord");
 		expect(mockScope.messages[2].user).toEqual("Spazie MacGuy");
+	});
+
+	it("Limits interval to 10 updates", function () {
+		for(var i = 0; i < 11; i++) {
+			mockInterval.flush(5000);
+		}
+		expect(mockScope.intervalCounter).toEqual(10);
+	});
+
+	it("Increments timer counter", function () {
+		mockTimeout.flush(5000);
+		expect(mockScope.timerCounter).toEqual(1);
 	});
 
 });
