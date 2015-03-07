@@ -78,7 +78,13 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 		};
 	})
 
-	.controller('TestCtrl', function($scope, $rootScope, $route, $routeParams, $location) {
+	// Should be removed after learning
+	.controller('TestCtrl', function($scope, $rootScope, $http) {
+
+		$http.get("/json/messages.json")
+			.success(function (data) {
+				$scope.messages = data;
+			});
 
 		$scope.counter = 0;
 
