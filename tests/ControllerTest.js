@@ -1,9 +1,11 @@
+// karma start karma.config.js
 describe("Controller Test", function () {
 	// Arrange
 	var mockScope = {};
 	var controller;
 
-	beforeEach(angular.mock.module("twitter"));
+	// You can also, angular.mock.module
+	beforeEach(module("twitter"));
 
 	beforeEach(angular.mock.inject(function ($controller, $rootScope) {
 		mockScope = $rootScope.$new();
