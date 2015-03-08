@@ -129,4 +129,17 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 				}
 			}
 		}
+	})
+
+	// Shoudl be removed after learning
+	.factory('counterService', function() {
+		var counter = 0;
+		return {
+			incrementCounter: function() {
+				counter++;
+			}, 
+			getCounter: function() {
+				return counter;
+			}
+		}
 	});
