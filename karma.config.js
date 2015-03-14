@@ -22,7 +22,9 @@ module.exports = function(config) {
       'bower_components/jquery/dist/jquery.js',
       'js/min/ajs-app.min.js',
       'js/min/templates.min.js',
-      'tests/*.js'
+      'tests/*.js',
+
+      {pattern: 'tests/fixtures/*.json', watched: false, served: true, included: false}
     ],
 
 
