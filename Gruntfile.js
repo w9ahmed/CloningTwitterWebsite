@@ -54,6 +54,11 @@ module.exports = function(grunt) {
     		dest: 'css/min/styles.min.css'
     	}
     },
+    karma: {
+      unit: {
+        configFile: 'karma.config.js'
+      }
+    },
     watch: {
       app: {
         files: ['app/**/*.*', 'pages/**/*.js', 'components/**/*.*'],
@@ -73,8 +78,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-angular-templates');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-karma');
 
   // Default task(s).
-  grunt.registerTask('default', ['ngtemplates', 'uglify', 'sass', 'cssmin']);
-  grunt.registerTask('dev', ['ngtemplates', 'uglify', 'sass', 'cssmin', 'watch']);
+  grunt.registerTask('default', ['ngtemplates', 'uglify', 'sass', 'cssmin', 'karma']);
+  grunt.registerTask('dev', ['ngtemplates', 'uglify', 'sass', 'cssmin', 'karma', 'watch']);
 };
