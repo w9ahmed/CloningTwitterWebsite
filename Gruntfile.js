@@ -83,4 +83,5 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['ngtemplates', 'uglify', 'sass', 'cssmin', 'karma']);
   grunt.registerTask('dev', ['ngtemplates', 'uglify', 'sass', 'cssmin', 'karma', 'watch']);
+  grunt.registerTask('test', ['karma']);
 };
