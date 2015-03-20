@@ -14,7 +14,19 @@ describe('RouteTest', function() {
 		backend = $httpBackend;
 	}));
 
-	it('should load page moderate', function() {
+	it('should redirect to home page', function() {
+
+		backend.expectGET('pages/home/home.html').respond(200, 'Home Page');
+
+		expect($location.path()).toBe('/');
+		$location.path('/home');
+
+		$rootScope.$digest();
+		expect($location.path()).toBe('/');
+		expect($route.current.controller).toBe('HomeCtrl');
+	});
+
+	it('should load home page', function() {
 
 		backend.expectGET('pages/home/home.html').respond(200, 'Home Page');
 
@@ -24,4 +36,28 @@ describe('RouteTest', function() {
 		expect($location.path()).toBe('/');
 		expect($route.current.controller).toBe('HomeCtrl');
 	});
+
+	it('should load notifications page', function() {
+
+		backend.expectGET('pages/notifications/notifications.html').respond(200, 'Notifications Page');
+
+		$location.path('/notifications');
+
+		$rootScope.$digest();
+		expect($location.path()).toBe('/notifications');
+		expect($route.current.controller).toBe('NotificationsCtrl');
+	});
+
+
+	it('should load discover page', function() {
+
+		backend.expectGET('pages/discover/discover.html').respond(200, 'Discover Page');
+
+		$location.path('/discover');
+
+		$rootScope.$digest();
+		expect($location.path()).toBe('/discover');
+		expect($route.current.controller).toBe('DiscoverCtrl');
+	});
+
 });
