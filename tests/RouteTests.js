@@ -22,6 +22,8 @@ describe('RouteTest', function() {
 
 		$rootScope.$digest();
 		expect($location.path()).toBe('/');
+		expect($route.current.loadedTemplateUrl).toBe('pages/home/home.html');
+		expect($route.current.templateUrl).toBe('pages/home/home.html');
 		expect($route.current.controller).toBe('HomeCtrl');
 		expect($route.current.title).toBe('Home');
 	});
@@ -34,6 +36,8 @@ describe('RouteTest', function() {
 
 		$rootScope.$digest();
 		expect($location.path()).toBe('/');
+		expect($route.current.loadedTemplateUrl).toBe('pages/home/home.html');
+		expect($route.current.templateUrl).toBe('pages/home/home.html');
 		expect($route.current.controller).toBe('HomeCtrl');
 		expect($route.current.title).toBe('Home');
 	});
@@ -46,6 +50,8 @@ describe('RouteTest', function() {
 
 		$rootScope.$digest();
 		expect($location.path()).toBe('/notifications');
+		expect($route.current.loadedTemplateUrl).toBe('pages/notifications/notifications.html');
+		expect($route.current.templateUrl).toBe('pages/notifications/notifications.html');
 		expect($route.current.controller).toBe('NotificationsCtrl');
 		expect($route.current.title).toBe('Notifications');
 	});
@@ -59,6 +65,8 @@ describe('RouteTest', function() {
 
 		$rootScope.$digest();
 		expect($location.path()).toBe('/discover');
+		expect($route.current.loadedTemplateUrl).toBe('pages/discover/discover.html');
+		expect($route.current.templateUrl).toBe('pages/discover/discover.html');
 		expect($route.current.controller).toBe('DiscoverCtrl');
 		expect($route.current.title).toBe('Discover');
 	});
