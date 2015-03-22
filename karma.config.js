@@ -20,6 +20,7 @@ module.exports = function(config) {
       'bower_components/angular-moment/angular-moment.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/jquery/dist/jquery.js',
+      'bower_components/karma-read-json/karma-read-json.js',
       'js/min/ajs-app.min.js',
       'js/min/templates.min.js',
       'tests/*.js',

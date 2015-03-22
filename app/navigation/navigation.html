@@ -6,10 +6,10 @@
     <!-- Navigation Bar main Components -->
     <div>
       <ul class="nav navbar-nav">
-        <li ng-class="{'active': $root.homeTab === true}"><a href="/home"><span class="glyphicon glyphicon-home icon-btn active"></span>Home</a><div class="actives"></div></li>
-        <li ng-class="{'active': $root.notiTab === true}"><a href="/notifications"><span class="glyphicon glyphicon-bell icon-btn"></span>Notifications</a><div></div></li>
+        <li ng-class="{'active': $root.currentPage === 'Home'}"><a href="/home"><span class="glyphicon glyphicon-home icon-btn active"></span>Home</a><div class="actives"></div></li>
+        <li ng-class="{'active': $root.currentPage === 'Notifications'}"><a href="/notifications"><span class="glyphicon glyphicon-bell icon-btn"></span>Notifications</a><div></div></li>
         <li data-toggle="modal" data-target="#directMessages"><a href="#"><span class="glyphicon glyphicon-envelope icon-btn"></span>Messages</a><div></div></li>
-        <li ng-class="{'active': $root.discTab === true}"><a href="/discover"><span class="glyphicon glyphicon-bullhorn icon-btn"></span>Discover</a><div></div></li>
+        <li ng-class="{'active': $root.currentPage === 'Discover'}"><a href="/discover"><span class="glyphicon glyphicon-bullhorn icon-btn"></span>Discover</a><div></div></li>
       </ul>
     </div> <!-- end of Navigation Bar Components -->
 
