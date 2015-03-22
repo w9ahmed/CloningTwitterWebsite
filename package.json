@@ -19,6 +19,10 @@
   "dependencies": {
     "express": "~4.11.2",
     "colors": "~1.0.3",
+    "mongoose": "~3.6.2",
+    "morgan":"~1.2.2",
+    "body-parser": "~1.5.2",
+    "method-override": "~2.1.2",
     "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",

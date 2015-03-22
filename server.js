@@ -5,13 +5,38 @@ var port = 5000;
 
 console.log('Running Server for '.blue + site.yellow + '...'.yellow);
 
-var express = require('express');
+var express  = require('express');
 var app = express();
+var mongoose = require('mongoose');
+var morgan = require('morgan'); // log requests to the console (express4)
+var bodyParser = require('body-parser'); // pull information from HTML POST (express4)
+var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
-app.use(express.static('../CloningTwitterWebsite'));
+mongoose.connect('mongodb://node:node@mongo.onmodulus.net:27017/uwO3mypu');
+
+app.use(express.static(__dirname));
+
+// log every request to the console
+app.use(morgan('dev'));
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({'extended':'true'}));
+
+// parse application/json
+app.use(bodyParser.json());
+
+// parse application/vnd.api+json as json
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(methodOverride());
 
 app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+	// load the single view file (angular will handle the page changes on the front-end)
+    res.sendFile(__dirname + '/index.html');
+});
+
+/* MODEL */
+var Tweet = mongoose.model('Tweet', {
+    text : String
 });
 
 app.listen(port);
