@@ -33,11 +33,3 @@ app.get('*', function(req, res) {
 	// load the single view file (angular will handle the page changes on the front-end)
     res.sendFile(__dirname + '/index.html');
 });
-var Tweet = mongoose.model('Tweet', {
-    text : String
-});
-app.listen(port);
-
-console.log('Running server on port: '.blue + port.toString().yellow);
-console.log('Success...'.green );
-console.log('Go to (http://localhost:5000) on your browser!');

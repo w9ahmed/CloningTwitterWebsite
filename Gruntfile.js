@@ -33,6 +33,12 @@ module.exports = function(grunt) {
         dest: 'js/min/templates.min.js'
       }
     },
+    concat: {
+      dist: {
+        src: ['server/config/config.js', 'server/models/*.js', 'server/routes/*.js', 'server/config/config2.js'],
+        dest: 'server.js',
+      },
+    },
     sass: {
       options: {
         style: 'expanded'
@@ -61,7 +67,7 @@ module.exports = function(grunt) {
     },
     watch: {
       app: {
-        files: ['app/**/*.*', 'pages/**/*.js', 'components/**/*.*'],
+        files: ['app/**/*.*', 'pages/**/*.js', 'components/**/*.*', 'server/**/*.js'],
         tasks: ['ngtemplates', 'uglify']
       },
       scss: {
@@ -78,10 +84,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-angular-templates');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-karma');
 
   // Default task(s).
-  grunt.registerTask('default', ['ngtemplates', 'uglify', 'sass', 'cssmin', 'karma']);
-  grunt.registerTask('dev', ['ngtemplates', 'uglify', 'sass', 'cssmin', 'karma', 'watch']);
+  grunt.registerTask('default', ['ngtemplates', 'uglify', 'concat', 'sass', 'cssmin', 'karma']);
+  grunt.registerTask('dev', ['ngtemplates', 'uglify', 'concat', 'sass', 'cssmin', 'karma', 'watch']);
   grunt.registerTask('test', ['karma']);
 };
