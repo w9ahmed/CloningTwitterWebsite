@@ -11,20 +11,20 @@ var app            = express();
 var morgan = require('morgan'); // log requests to the console
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
-var mongoose = require('mongoose');
+var mongojs = require('mongojs');
 // configuration ===========================================
 
 app.use(morgan('dev'));
 
 // config files
-var db = require('./server/config/db');
+var db = mongojs('twitter-clone', ['twitter']);
 
 // set our port
 var port = process.env.PORT || 5000; 
 
 // connect to our mongoDB database 
 // (uncomment after you enter in your own credentials in config/db.js)
-mongoose.connect(db.url);
+// mongoose.connect(db.url);
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json 
@@ -42,16 +42,13 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname));
 
 app.get('/home', function(req, res) {
-	// load the single view file (angular will handle the page changes on the front-end)
     res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/notifications', function(req, res) {
-	// load the single view file (angular will handle the page changes on the front-end)
     res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/discover', function(req, res) {
-	// load the single view file (angular will handle the page changes on the front-end)
     res.sendFile(__dirname + '/index.html');
 });

@@ -20,7 +20,7 @@
     "express": "~4.11.2",
     "colors": "~1.0.3",
     "mongoose": "~3.6.2",
-    "morgan":"~1.2.2",
+    "morgan": "~1.2.2",
     "body-parser": "~1.5.2",
     "method-override": "~2.1.2",
     "grunt": "~0.4.5",
@@ -34,7 +34,8 @@
     "jasmine-core": "~2.2.0",
     "karma": "~0.12.31",
     "karma-jasmine": "~0.3.5",
-    "karma-chrome-launcher": "~0.1.7"
+    "karma-chrome-launcher": "~0.1.7",
+    "mongojs": "~0.18.2"
   },
   "devDependencies": {
     "grunt-karma": "~0.10.1",
