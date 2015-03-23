@@ -5,29 +5,38 @@ var port = 5000;
 
 console.log('Running Server for '.blue + site.yellow + '...'.yellow);
 
-var express  = require('express');
-var app = express();
+// modules =================================================
+var express        = require('express');
+var app            = express();
+var bodyParser     = require('body-parser');
+var methodOverride = require('method-override');
 var mongoose = require('mongoose');
-var morgan = require('morgan'); // log requests to the console (express4)
-var bodyParser = require('body-parser'); // pull information from HTML POST (express4)
-var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
+// configuration ===========================================
+    
+// config files
+var db = require('./server/config/db');
 
-mongoose.connect('mongodb://node:node@mongo.onmodulus.net:27017/uwO3mypu');
+// set our port
+var port = process.env.PORT || 5000; 
 
-app.use(express.static(__dirname));
+// connect to our mongoDB database 
+// (uncomment after you enter in your own credentials in config/db.js)
+mongoose.connect(db.url);
 
-// log every request to the console
-app.use(morgan('dev'));
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({'extended':'true'}));
-
-// parse application/json
-app.use(bodyParser.json());
+// get all data/stuff of the body (POST) parameters
+// parse application/json 
+app.use(bodyParser.json()); 
 
 // parse application/vnd.api+json as json
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
-app.use(methodOverride());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true })); 
+
+// override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
+app.use(methodOverride('X-HTTP-Method-Override')); 
+
+app.use(express.static(__dirname));
 
 app.get('*', function(req, res) {
 	// load the single view file (angular will handle the page changes on the front-end)

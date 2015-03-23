@@ -3,7 +3,7 @@ app.directive('newTweet', function ($templateCache) {
 		restrict: 'E',
 		scope: true,
 		template: $templateCache.get('app/new-tweet/new-tweet'),
-		controller: function($scope, $rootScope) {
+		controller: function($scope, $rootScope, $http) {
 
 			$scope.sendTweet = function(tweet) {
 				tweet.time = Date.now();
@@ -15,7 +15,7 @@ app.directive('newTweet', function ($templateCache) {
 
 				$rootScope.bartext = 1;
 				$rootScope.tweets.push(tweet);
-			}
+			};
 
 		}
 	}

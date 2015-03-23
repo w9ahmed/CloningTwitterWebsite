@@ -1,4 +1,5 @@
 app.listen(port);
+exports = module.exports = app;
 
 console.log('Running server on port: '.blue + port.toString().yellow);
 console.log('Success...'.green );
