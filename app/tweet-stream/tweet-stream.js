@@ -5,8 +5,8 @@ app.directive('tweetStream', function ($templateCache) {
 		template: $templateCache.get('app/tweet-stream/tweet-stream'),
 		controller: function($http, $scope, $rootScope) {
 
-			$scope.getData = function() {
-				$http.get("json/tweets.json")
+			$rootScope.getTweets = function() {
+				$http.get("/api/tweets")
 					.success(function(data, status) {
 						$scope.tweets = data;
 						$rootScope.tweets = data;
@@ -17,7 +17,7 @@ app.directive('tweetStream', function ($templateCache) {
 				$rootScope.currentProfile = tweet;
 			}
 
-			$scope.getData();
+			$rootScope.getTweets();
 		}
 	};
 });

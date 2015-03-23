@@ -3,7 +3,4 @@ app.controller('HomeCtrl', function($scope, $rootScope, $http, $route, $routePar
 	this.$location = $location;
 	$rootScope.currentPage = "Home";
 
-	$http.get('/api/tweets').success(function(data) {
-		console.log(data);
-	});
 });

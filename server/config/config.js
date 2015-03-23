@@ -16,15 +16,11 @@ var mongojs = require('mongojs');
 
 app.use(morgan('dev'));
 
-// config files
-var db = mongojs('twitter-clone', ['twitter']);
-
 // set our port
 var port = process.env.PORT || 5000; 
 
 // connect to our mongoDB database 
-// (uncomment after you enter in your own credentials in config/db.js)
-// mongoose.connect(db.url);
+var db = mongojs('twitter', ['tweets']);
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json 

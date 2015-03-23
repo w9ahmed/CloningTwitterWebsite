@@ -1,7 +1,11 @@
 app.get('/api/tweets', function (req, res) {
-    console.log("I received a GET request");
-    db.twitter.find(function (err, docs) {
-        console.log(docs);
+    db.tweets.find(function (err, docs) {
         res.json(docs);
+    });
+});
+
+app.post('/api/tweets', function (req, res) {
+    db.tweets.insert(req.body, function(err, doc) {
+        res.json(doc);
     });
 });
