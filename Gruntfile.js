@@ -73,6 +73,10 @@ module.exports = function(grunt) {
       scss: {
         files: ['css/styles.scss'],
         tasks: ['sass', 'cssmin']
+      },
+      server: {
+        files: ['server/**/*.js'],
+        tasks: ['concat']
       }
     }
   });
