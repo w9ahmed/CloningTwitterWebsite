@@ -45,9 +45,9 @@ module.exports = function(grunt) {
       },
       build: {
         expand: true,
-        cwd: 'css',
+        cwd: 'styles',
         src: ['*.scss'],
-        dest: 'css/',
+        dest: 'styles/',
         ext: '.css'
       }
     },
@@ -56,8 +56,8 @@ module.exports = function(grunt) {
         root: './'
       },
     	build: {
-    		src: 'css/styles.css',
-    		dest: 'css/min/styles.min.css'
+    		src: 'styles/styles.css',
+    		dest: 'styles/min/styles.min.css'
     	}
     },
     karma: {
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
         tasks: ['ngtemplates', 'uglify']
       },
       scss: {
-        files: ['css/styles.scss'],
+        files: ['styles/styles.scss'],
         tasks: ['sass', 'cssmin']
       },
       server: {
