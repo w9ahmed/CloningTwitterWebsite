@@ -16,7 +16,7 @@ Basically, the script will do all the following steps and commands for you, but 
 * sudo apt-get install npm
 
 ### If you don't have MongoDB installed: ###
-* [http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/](Follow this link to install it)
+* [http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu](Follow this link to install it)
 
 ### If you don't have Bower installed: ###
 * sudo npm install -g bower

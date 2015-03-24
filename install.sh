@@ -17,8 +17,12 @@ if which mongo >/dev/null; then
     echo -ne "mongoDB already exists\t...\t"
     mongo --version
 else
+    echo "Import the public key used by the package management system."
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
     echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+    echo "Reload local package database"
+    sudo apt-get update
+    echo "Installing mongoDB"
     sudo apt-get install -y mongodb-org
 fi
 
