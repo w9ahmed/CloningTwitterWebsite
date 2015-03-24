@@ -2,5 +2,7 @@ bower_components/
 node_modules/
 js/templates/
 server.js
+styles/styles.css
+styles/styles.css.map
 **/min/
 .*
