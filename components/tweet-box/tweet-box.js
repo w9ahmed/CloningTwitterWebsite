@@ -5,7 +5,7 @@ app.directive('tweetBox', function($templateCache) {
 			tweet: '='
 		},
 		template: $templateCache.get('components/tweet-box/tweet-box'),
-		controller: function($scope) {
+		controller: function($scope, $rootScope, $http) {
 
 			$scope.retweet = function() {
 				if($scope.tweet.retweeted) {
@@ -14,6 +14,7 @@ app.directive('tweetBox', function($templateCache) {
 					$scope.tweet.retweets++;
 				}
 				$scope.tweet.retweeted = !$scope.tweet.retweeted;
+				$scope.update();
 			};
 
 			$scope.favorite = function() {
@@ -23,6 +24,28 @@ app.directive('tweetBox', function($templateCache) {
 					$scope.tweet.favorites++;
 				}
 				$scope.tweet.favorited = !$scope.tweet.favorited;
+				$scope.update();
+			};
+
+			$scope.delete = function() {
+				$http.delete('/api/tweets/' + $scope.tweet._id)
+					.success(function () {
+						$rootScope.getTweets();
+					});
+			};
+
+			$scope.update = function() {
+				$http.put('/api/tweets/' + $scope.tweet._id, $scope.tweet)
+					.success(function () {
+						$scope.getTweet();
+					})
+			};
+
+			$scope.getTweet = function() {
+				$http.get('/api/tweets/' + $scope.tweet._id)
+					.success(function (data) {
+						$scope.tweet = data;
+					});
 			};
 			
 		}

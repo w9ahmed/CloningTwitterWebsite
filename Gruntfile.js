@@ -65,14 +65,20 @@ module.exports = function(grunt) {
         configFile: 'karma.config.js'
       }
     },
+    reload: {
+      port: 5000,
+      proxy: {
+          host: 'localhost',
+      }
+    },
     watch: {
       app: {
         files: ['app/**/*.*', 'pages/**/*.js', 'components/**/*.*', 'server/**/*.js'],
-        tasks: ['ngtemplates', 'uglify']
+        tasks: ['ngtemplates', 'uglify', 'reload']
       },
       scss: {
         files: ['css/styles.scss'],
-        tasks: ['sass', 'cssmin']
+        tasks: ['sass', 'cssmin', 'reload']
       },
       server: {
         files: ['server/**/*.js'],
@@ -89,6 +95,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-reload');
   grunt.loadNpmTasks('grunt-karma');
 
   // Default task(s).

@@ -40,6 +40,7 @@
   "devDependencies": {
     "grunt-karma": "~0.10.1",
     "phantomjs": "~1.9.16",
-    "karma-phantomjs-launcher": "~0.1.4"
+    "karma-phantomjs-launcher": "~0.1.4",
+    "grunt-reload": "~0.2.0"
   }
 }
