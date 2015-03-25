@@ -23,6 +23,9 @@ var app = angular.module("twitter", ['ngRoute', 'angularMoment'])
 				controllerAs: 'DiscoverCtrl',
 				title: 'Discover'
 			})
+			.when('/login', {
+				templateUrl: 'login.html',
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
