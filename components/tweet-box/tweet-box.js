@@ -31,6 +31,9 @@ app.directive('tweetBox', function($templateCache) {
 				$http.delete('/api/tweets/' + $scope.tweet._id)
 					.success(function () {
 						$rootScope.getTweets();
+						$rootScope.user.tweets--;
+						$http.put('/api/users/' + $rootScope.user._id + '/tweets',
+						 $rootScope.user);
 					});
 			};
 

@@ -20,7 +20,7 @@ app.use(morgan('dev'));
 var port = process.env.PORT || 5000; 
 
 // connect to our mongoDB database 
-var db = mongojs('twitter', ['tweets']);
+var db = mongojs('twitter', ['tweets', 'users']);
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json 

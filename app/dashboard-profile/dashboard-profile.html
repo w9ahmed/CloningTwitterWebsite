@@ -11,8 +11,8 @@
       <div class="dash-profile-container">
         <a href="#"><div class="dash-profile-photo"></div></a>
         <div class="dash-profile-name">
-          <a href="#"><h5>{{content.name}}</h5></a>
-          <a href="#"><small class="text-muted">{{content.username}}</small></a>
+          <a href="#"><h5>{{user.name}}</h5></a>
+          <a href="#"><small class="text-muted">{{user.username}}</small></a>
         </div>
       </div>
     </div>
@@ -21,7 +21,9 @@
     <!-- Tweets - Following - Followers -->
     <div>
       <ul class="list-unstyled list-inline">
-        <li class="text-center" ng-repeat="item in content.info"><a class="dash-profile-details"  href="#"><span class="text-muted"><small>{{item.name | uppercase}}</small></span><br><span>{{item.value}}</span></a></li>
+        <li class="text-center"><a class="dash-profile-details"  href="#"><span class="text-muted"><small>{{"tweets" | uppercase}}</small></span><br><span>{{user.tweets}}</span></a></li>
+        <li class="text-center"><a class="dash-profile-details"  href="#"><span class="text-muted"><small>{{"following" | uppercase}}</small></span><br><span>{{user.following}}</span></a></li>
+        <li class="text-center"><a class="dash-profile-details"  href="#"><span class="text-muted"><small>{{"followers" | uppercase}}</small></span><br><span>{{user.followers}}</span></a></li>
       </ul>
     </div>
      <!-- end of Tweets - Following - Followers -->

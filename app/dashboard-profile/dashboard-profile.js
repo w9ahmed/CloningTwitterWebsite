@@ -5,14 +5,15 @@ app.directive('dashboardProfile', function ($templateCache) {
 		template: $templateCache.get('app/dashboard-profile/dashboard-profile'),
 		controller: ['$http', '$scope', '$rootScope', function ($http, $scope, $rootScope) {
 
-			$scope.getData = function() {
-				$http.get("json/user.json")
+			$scope.getUser = function() {
+				$http.get("/api/users/55148444ebf337840e03cdc7")
 					.success(function(data) {
-						$scope.content = data;
+						$scope.user = data;
+						$rootScope.user = $scope.user;
 					});
 			};
 
-			$scope.getData();
+			$scope.getUser();
 		}]
 	};
 });
