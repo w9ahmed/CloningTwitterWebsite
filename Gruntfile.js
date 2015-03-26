@@ -73,12 +73,18 @@ module.exports = function(grunt) {
     },
     watch: {
       app: {
+        options: {
+          livereload: true
+        },
         files: ['app/**/*.*', 'pages/**/*.js', 'components/**/*.*', 'server/**/*.js'],
-        tasks: ['ngtemplates', 'uglify', 'reload']
+        tasks: ['ngtemplates', 'uglify']
       },
       scss: {
-        files: ['css/styles.scss'],
-        tasks: ['sass', 'cssmin', 'reload']
+        options: {
+          livereload: true
+        },
+        files: ['styles/styles.scss'],
+        tasks: ['sass', 'cssmin']
       },
       server: {
         files: ['server/**/*.js'],

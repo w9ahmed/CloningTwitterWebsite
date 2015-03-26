@@ -40,7 +40,7 @@ app.put('/api/users/:id/followers', function (req, res) {
 	db.users.findAndModify({
 		query: {_id: mongojs.ObjectId(id)},
 		update: {$set: {
-			tweets: req.body.followers
+			followers: req.body.followers
 		}},
 		new: true}, function(err, doc) {
 			res.json(doc);
@@ -53,7 +53,7 @@ app.put('/api/users/:id/following', function (req, res) {
 	db.users.findAndModify({
 		query: {_id: mongojs.ObjectId(id)},
 		update: {$set: {
-			tweets: req.body.following
+			following: req.body.following
 		}},
 		new: true}, function(err, doc) {
 			res.json(doc);
