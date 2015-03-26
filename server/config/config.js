@@ -37,10 +37,6 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.static(__dirname));
 
-app.get('/login', function(req, res) {
-    res.sendFile(__dirname + '/login.html');
-});
-
 app.get('/home', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
