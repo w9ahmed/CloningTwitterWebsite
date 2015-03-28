@@ -5,6 +5,13 @@ app.directive('newTweet', function ($templateCache) {
 		template: $templateCache.get('app/new-tweet/new-tweet'),
 		controller: function($scope, $rootScope, $http) {
 
+			$rootScope.initNewTweet = function() {
+				delete $scope.tweet;
+
+				$scope.tweet = {};
+				$scope.tweet.tweet = "";
+			};
+
 			$scope.sendTweet = function(tweet) {
 				tweet.time = new Date();
 				tweet.user = 'Ahmed Sami Mohamed';
