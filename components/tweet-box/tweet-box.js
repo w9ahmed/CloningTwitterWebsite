@@ -50,7 +50,15 @@ app.directive('tweetBox', function($templateCache) {
 						$scope.tweet = data;
 					});
 			};
-			
+
+			$scope.disableSelf = function() {
+				$scope.self = false;
+				if($scope.tweet.userId === $rootScope.user._id) {
+					$scope.self = true;
+				}
+			};
+
+			$scope.disableSelf();			
 		}
 	};
 });

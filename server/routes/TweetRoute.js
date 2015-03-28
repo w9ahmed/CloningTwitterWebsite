@@ -12,6 +12,7 @@ app.get('/api/tweets/:id', function (req, res) {
 });
 
 app.post('/api/tweets', function (req, res) {
+	req.time = new Date();
     db.tweets.insert(req.body, function(err, doc) {
         res.json(doc);
     });

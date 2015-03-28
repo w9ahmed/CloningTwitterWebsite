@@ -14,10 +14,9 @@ app.directive('newTweet', function ($templateCache) {
 
 			$scope.sendTweet = function(tweet) {
 				tweet.time = new Date();
-				tweet.user = 'Ahmed Sami Mohamed';
-				tweet.username = '@w9ahmed';
+				tweet.user = $rootScope.user.name;
+				tweet.username = $rootScope.user.username;
 				tweet.userId = $rootScope.user._id;
-				tweet.userData = $rootScope.user;
 				tweet.retweets = 0;
 				tweet.favorites = 0;
 				tweet.self = true;

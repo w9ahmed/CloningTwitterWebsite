@@ -10,7 +10,7 @@
       <ul class="list-unstyled list-inline">
         <li id="reply"><a href="#"><div><span class="glyphicon glyphicon-new-window"></span></div></a></li>
         <li id="retweet">
-          <a href="#" ng-click="retweet();" ng-class="{'retweeted': tweet.retweeted}">
+          <a href="#" ng-disabled="self" ng-click="retweet();" ng-class="{'retweeted': tweet.retweeted}">
             <div>
               <span class="glyphicon glyphicon-retweet"></span>
               <span class="bdg-mrg">{{tweet.retweets}}</span>
@@ -18,7 +18,7 @@
           </a>
         </li>
         <li id="favorite">
-          <a href="#" ng-click="favorite();" ng-class="{'favorited': tweet.favorited}">
+          <a href="#" ng-disabled="self" ng-click="favorite();" ng-class="{'favorited': tweet.favorited}">
             <div>
               <span class="glyphicon glyphicon-asterisk"></span>
               <span class="bdg-mrg">{{tweet.favorites}}</span>
@@ -26,7 +26,7 @@
           </a>
         </li>
         <li id="options">
-          <a href="#" ng-click="delete();">
+          <a href="#" ng-disabled="!self" ng-click="delete();">
             <div>
               <span class="glyphicon glyphicon-minus"></span>
             </div>
