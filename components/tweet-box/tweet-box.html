@@ -10,7 +10,7 @@
       <ul class="list-unstyled list-inline">
         <li id="reply"><a href="#"><div><span class="glyphicon glyphicon-new-window"></span></div></a></li>
         <li id="retweet">
-          <a href="#" ng-disabled="self" ng-click="retweet();" ng-class="{'retweeted': tweet.retweeted}">
+          <a href="#" ng-hide="self" ng-click="retweet();" ng-class="{'retweeted': tweet.retweeted}">
             <div>
               <span class="glyphicon glyphicon-retweet"></span>
               <span class="bdg-mrg">{{tweet.retweets}}</span>
